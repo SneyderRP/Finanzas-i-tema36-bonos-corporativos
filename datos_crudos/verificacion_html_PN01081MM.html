@@ -1,0 +1,2286 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head><script src="/oly-Almost-That-hane-Sey-a-sleepe-Atter-Macduffe" async></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script> if(top == self) { document.documentElement.style.display='block'}
+else { top.location = self.location; } </script>
+
+
+
+<link href="/estadisticas/series/css/ajax_upload.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/estadisticas/series/css/jquery-1.7.2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/estadisticas/series/css/back.css?20260921192004" media="screen" rel="stylesheet" type="text/css" />
+<link href="/estadisticas/series/css/nav.css?20260921192004" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+<link href="/estadisticas/series/css/series-estadisticas.css?20260921192004" media="screen" rel="stylesheet" type="text/css" />
+<link href="/estadisticas/series/css/estilo.css?20260921192004" media="screen" rel="stylesheet" type="text/css" />
+
+<!--[if lt IE 9]>
+	<link href="/estadisticas/series/css/series-estadisticas-ie.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/estadisticas/series/css/estilo-ie.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lte IE 8]>
+    <link href="/estadisticas/series/css/series-estadisticas-ie.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/estadisticas/series/css/estilo-ie.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+
+
+
+<!--[if gt IE 7]>
+	<link href="/estadisticas/series/css/series-estadisticas.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/estadisticas/series/css/estilo.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if gte IE 8]>
+	<link href="/estadisticas/series/css/series-estadisticas.css" media="screen" rel="stylesheet" type="text/css" />
+	<link href="/estadisticas/series/css/estilo.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+
+<link href="/estadisticas/series/css/tcg-elevator/css/jquery.tcg-elevator.css" media="screen" rel="stylesheet" type="text/css" />
+	
+<script type="text/javascript" src="/estadisticas/series/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/bootstrap/js/bootstrap.js"></script>
+	
+<script type="text/javascript" src="/estadisticas/series/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/ajax_upload.js" ></script>
+
+
+<script type="text/javascript" src="/estadisticas/series/js/tcg-elevator/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+	var jQuery_1_12_4 = $.noConflict(true);
+</script>
+<script type="text/javascript" src="/estadisticas/series/js/tcg-elevator/js/jquery.tcg-elevator.js"></script>
+
+<script>
+
+$(document).ready(function(){
+	//$('.tcg-elevator').tcgElevator();
+
+    if ($.fn.tcgElevator) {
+        $('.tcg-elevator').tcgElevator();
+
+
+		$('.elevator').tcgElevator({		
+			toggleSelector: '.panel-heading',
+			contentSelector: '.panel-body',
+			/*
+			speed: 500,
+			openingSpeed: 500,
+			closingSpeed: 1000,
+			*/  
+			openClass: 'open',
+			openingClass: 'opening',
+			closingClass: 'closing'
+		});
+
+    } 
+
+
+	var closed = true;
+	$('.toggle-all').click(function(e){
+		var functionToCall = closed ? 'open' : 'close';
+		closed = !closed;
+		$('.tcg-elevator').tcgElevator(functionToCall);
+	})
+	
+
+	$(".toggle-all").click(
+		function() {
+			if($(this).hasClass("cls-iconos-textos")) {
+			   $(this).removeClass("cls-iconos-textos");
+			   $(this).addClass("cls-iconos-textos-negativo");
+			} else {
+				$(this).removeClass("cls-iconos-textos-negativo");
+			    $(this).addClass("cls-iconos-textos");
+			}
+		}
+	);
+
+	
+})
+
+
+</script>
+
+
+<!-- <script type="text/javascript" src="/estadisticas/series/js/jquery.ui.datepicker_ing.js"></script> -->
+<!-- <script type="text/javascript" src="/estadisticas/series/js/jquery.ui.datepicker_esp.js"></script> -->
+
+<!-- <script type="text/javascript" src="/estadisticas/series/js/jquery.ui.datepicker.js"></script> -->
+
+<script type="text/javascript" src="/estadisticas/series/js/jquery.ui.datepicker_esp.js"></script>
+
+
+
+<script type="text/javascript" src="/estadisticas/series/js/estadisticas.js?20260921192004"></script>
+<script type="text/javascript" src="/estadisticas/series/js/js.js?20260921192004"></script>
+<script type="text/javascript" src="/estadisticas/series/js/validCampoFranz.js"></script>
+
+
+<script type="text/javascript" src="/estadisticas/series/js/funciones-personalizadas.js"></script>
+
+
+<link href="/estadisticas/series/css/font-awesome/css/font-awesome.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+<script type="text/javascript" src="/estadisticas/series/js/jalert/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="/estadisticas/series/js/jalert/jquery.alerts.js"></script>
+
+
+<link href="/estadisticas/series/js/jalert/jquery.alerts.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+		
+
+
+<script language="JavaScript">
+$(function() {
+	
+	    if ($('#desde').val() != undefined)
+		{	
+			$("#desde").datepicker({
+					changeMonth: true,
+					changeYear: true,
+					showOn: "button",		  
+					buttonImage: "https://estadisticas.bcrp.gob.pe/estadisticas/series/js/images/calendar.gif",
+					buttonImageOnly: true
+			});
+		}
+
+	    if ($('#hasta').val() != undefined)
+		{			
+			$("#hasta").datepicker({
+					changeMonth: true,
+					changeYear: true,
+					showOn: "button",
+					buttonImage: "https://estadisticas.bcrp.gob.pe/estadisticas/series/js/images/calendar.gif",
+					buttonImageOnly: true
+			});
+		}
+
+	    if ($('#fecha_creacion').val() != undefined)
+		{			
+			$("#fecha_creacion").datepicker({
+					changeMonth: true,
+					changeYear: true,
+					showOn: "button",
+					buttonImage: "https://estadisticas.bcrp.gob.pe/estadisticas/series/js/images/calendar.gif",
+					buttonImageOnly: true
+			});
+		}
+		
+});
+
+
+
+
+
+
+</script> 
+
+
+<script type="text/javascript">
+
+// Bloquear history
+/*history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };*/
+	
+</script>  
+
+
+<meta name="keywords" content="Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación" />
+<meta name="description" content="Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación" />
+
+<title>Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación</title>
+</head>
+
+<script>
+	$(document).ready(function() {
+
+
+		if ($('#txtbuscador').val() != undefined) {
+			$('#txtbuscador').validCampoFranz(' abcdefghijklmnñopqrstuvwxyzáéíóú$1234567890');
+		}
+
+
+		//$('#txtbuscar').on( 'keyup change', function () {   // for text boxes
+		$('#txtbuscador').on('keypress', function(event) { // for text boxes
+
+
+
+			if (event.which == 13) {
+				v = $("#txtbuscador").val();
+
+				if (v != '') {
+
+					var filtropalabras = /^[0-9a-zA-Z$áéíóúñ ]+$/;
+					// utilizamos test para comprobar si el parametro valor cumple la regla
+					if (!filtropalabras.test(v)) {
+						alert('La texto a buscar contiene un caracter no permitido.');
+						return false;
+					}
+
+
+
+					//dataTable.search(v).draw();
+					//document.frmBuscador.action ="/estadisticas/series/mensuales/resultados/PN01081MM";
+					document.frmBuscador.action = "https://estadisticas.bcrp.gob.pe/estadisticas/series/buscador";
+					document.frmBuscador.submit();
+
+				} else {
+					alert('Ingresar texto a buscar');
+					return false;
+				}
+			}
+
+			//dataTable.search( $(this).val() ).draw();
+
+		});
+
+
+		$('#btnbuscador').on('click', function(event) { // for text boxes
+
+
+
+			v = $("#txtbuscador").val();
+
+			if (v != '') {
+
+
+				var filtropalabras = /^[0-9a-zA-Z$áéíóúñ ]+$/;
+				// utilizamos test para comprobar si el parametro valor cumple la regla
+				if (!filtropalabras.test(v)) {
+					alert('La texto a buscar contiene un caracter no permitido.');
+					return false;
+				}
+
+
+				dataTable.search(v).draw();
+
+				//document.frmBuscador.action ="/estadisticas/series/mensuales/resultados/PN01081MM";
+				document.frmBuscador.action = "https://estadisticas.bcrp.gob.pe/estadisticas/series/buscador";
+				document.frmBuscador.submit();
+
+			} else {
+				alert('Ingresar texto a buscar');
+				return false;
+			}
+
+			//dataTable.search( $(this).val() ).draw();
+
+		});
+
+
+	});
+</script>
+
+
+
+
+<body>
+
+
+
+
+
+	<!-- Google Tag Manager -->
+
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T2QFRJ"
+
+			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start':
+
+					new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+
+				'//www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+
+		})(window, document, 'script', 'dataLayer', 'GTM-T2QFRJ');
+	</script>
+
+	<!-- End Google Tag Manager -->
+
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-83099512-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+
+
+
+	
+			<div class="header">
+
+				<div class="textocabecera">
+					<div class="logocbm">
+						<a href="http://www.bcrp.gob.pe" target="_blank"><img alt="" src="/estadisticas/series/images/logo-70-espacio.png" id="logobcr"></a>
+					</div>
+					<div class="logoytitulo">
+						<!-- <div class="titlogobcrp"><span class="titulobcrpdata">BCRPData</span><br/>BANCO CENTRAL DE RESERVA DEL PERÚ<br/></div> -->
+						<div class="titlogobcrp">
+							<span class="titulobcrpdata">BCRPData</span><br />
+							<span class="subtitulobcrpdata_1">BANCO CENTRAL DE RESERVA DEL PERÚ</span><br />
+							<span class="subtitulobcrpdata_2">Gerencia Central de Estudios Económicos</span>
+							<br />
+						</div>
+					</div>
+				</div>
+
+
+			
+
+			<ul class="top">
+				
+
+
+
+
+
+					<div class="hidden">
+						<h1>
+							Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación						</h1>
+					</div>
+											<li><a title="Suscribirse" href="/estadisticas/series/suscribirse">Suscripción</a>&nbsp;|</li>
+<li><a title="Iniciar Sesión" href="/estadisticas/series/login">Iniciar Sesión</a></li>
+
+					
+
+				
+
+
+
+
+							</ul>
+
+
+
+			
+
+				<form id="frmBuscador" name="frmBuscador" action="/estadisticas/series/buscador" method="post">
+					<div class="input-group input-group-lg div-buscador">
+						<input id="txtbuscador" name="txtbuscador" type="text" class="form-control-buscador" placeholder="Buscar..." autocomplete="off" value="">
+						<span class="input-group-btn">
+							<button id="btnbuscador" name="btnbuscador" type="submit" class="btn btn-default btn-buscador-cabecera" style="background-color:#687f9f;color:white" onclick="Opciones('BU')"><i class="fa fa-search"></i></button>
+						</span>
+					</div>
+					<input type="hidden" id="accion" name="accion" value="buscar" />
+				</form>
+
+			
+
+			<div class="hidden">
+				<h1>
+					Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación				</h1>
+			</div>
+			
+			
+			</div>
+
+			
+
+
+
+			
+<div class="menu-principal">
+	<div class="menu">
+		<ul>
+			<li><a href="/estadisticas/series/index"  target="_self">Inicio</a></li><li><a href="http://www.bcrp.gob.pe/docs/Estadisticas/Calendario-Estadisticas.pdf"  target="_blank">Calendario de Difusión</a></li><li><a href="https://www.bcrp.gob.pe/estadisticas/cuadros-de-la-nota-semanal.html"  target="_blank">Cuadros Estadísticos</a></li><li><a href="#"  target="_self">Guías</a><ul><li><a href="/estadisticas/series/documentos/bcrpdataguiadeuso.pdf"  target="_blank">Uso de BCRPData</a></li><li><a href="/estadisticas/series/documentos/bcrpdataapi.pdf"  target="_blank">API para Desarrolladores</a></li><li><a href="/estadisticas/series/documentos/bcrpdataaddin.pdf"  target="_blank">Add-In para Excel</a></li></ul></li><li><a href="#"  target="_self">Acerca de</a><ul><li><a href="/estadisticas/series/ayuda/bcrpdata"  target="_self">BCRPData</a></li><li><a href="/estadisticas/series/ayuda/condiciones-de-uso"  target="_self">Condiciones de Uso</a></li><li><a href="/estadisticas/series/documentos/bcrpdatasuscribirse.pdf"  target="_blank">Ventajas de la Suscripción</a></li></ul></li>				<li class="button-back-nav">
+					<a id="button-back-nav-link">Retroceder</a>
+				</li>
+					</ul>
+	</div>
+</div>
+
+
+
+			<div class="contenido">
+				
+
+
+<table border="0" class="estilo-tabla-index" cellpadding="0" cellspacing="0">
+<tr>     
+	<td id="contenedor-barra-menu" valign="top"   class="td-index">
+	<div id="barra-lateral" >
+		  
+
+<div id="menu-izquierda-dinamico">
+<h4 class="titulo-izquierda"><a href="#"  class="titulo-h4" target="_self">Consulta de Series</a></h4><ul class="forma-vineta"><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/index"  target="_self">Por Categoría</a></li><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/buscador"  target="_self">Por Series</a></li></ul><h4 class="titulo-izquierda"><a href="#"  class="titulo-h4" target="_self">Herramientas</a></h4><ul class="forma-vineta"><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/lista/listadovalido"  target="_self">Listas Personalizadas</a></li><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/ayuda/addin"  target="_self">Add-In para Excel</a></li><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/ayuda/api"  target="_self">API para Desarrolladores</a></li><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/ayuda/app"  target="_self">App para Móviles</a></li><li class="forma-separar"><a class="forma-url" href="/estadisticas/series/ayuda/metadatos"  target="_self">Metadatos</a></li></ul><h4 class="titulo-izquierda"><a href="#"  class="titulo-h4" target="_self">Encuesta de Expectativas</a></h4><ul class="forma-vineta"><li class="forma-separar"><a class="forma-url" href="https://www.bcrp.gob.pe/docs/Estadisticas/Encuestas/expectativas-inflacion.xlsx"  target="_blank">Inflación</a></li><li class="forma-separar"><a class="forma-url" href="https://www.bcrp.gob.pe/docs/Estadisticas/Encuestas/expectativas-pbi.xlsx"  target="_blank">Producto Bruto Interno</a></li><li class="forma-separar"><a class="forma-url" href="https://www.bcrp.gob.pe/docs/Estadisticas/Encuestas/expectativas-tipo-de-cambio.xlsx"  target="_blank">Tipo de Cambio</a></li><li class="forma-separar"><a class="forma-url" href="https://www.bcrp.gob.pe/docs/Estadisticas/Encuestas/expectativas-series-de-indices.xlsx"  target="_blank">Índices de confianza empresarial</a></li></ul><h4 class="titulo-izquierda"><a href="/estadisticas/series/contactenos"  class="titulo-h4" target="_self">Contáctenos</a></h4>	
+
+
+
+</div>
+	</div>	  
+	</td>
+
+
+<!--<td style="padding-left:10px;" valign="top">-->
+<td class="centro-contenido" valign="top">
+
+<div class="nav-links">
+	<ul>
+					<li>
+				<a href="/estadisticas/series">Inicio</a>
+			</li>
+							<li>
+						<span>/</span>
+						<a href="/estadisticas/series/mensuales">Series Mensuales</a>
+					</li>
+										<li>
+						<span>/</span>
+						<span class="only-title">Ver Tabla</span>
+					</li>
+						</ul>
+</div>
+<form id="frmMensual" action="" method="post">
+    <div class="controles">
+        <div class="opciones_consulta">
+            <div class="fechas">
+                <div class="fecha">
+                    <div class="etiqueta"><p style="margin-left:-1px;">Desde:</p></div>
+                    <div class="grupo_combos">
+                        <select id="mes1" name="mes1">
+                                                        <option value="1" selected="selected" >Ene</option>
+                                                        <option value="2"  >Feb</option>
+                                                        <option value="3"  >Mar</option>
+                                                        <option value="4"  >Abr</option>
+                                                        <option value="5"  >May</option>
+                                                        <option value="6"  >Jun</option>
+                                                        <option value="7"  >Jul</option>
+                                                        <option value="8"  >Ago</option>
+                                                        <option value="9"  >Sep</option>
+                                                        <option value="10"  >Oct</option>
+                                                        <option value="11"  >Nov</option>
+                                                        <option value="12"  >Dic</option>
+                                                    </select>
+                        <select id="anio1" name="anio1">
+                                                        <option value="2026"  >2026</option>
+                                                        <option value="2025"  >2025</option>
+                                                        <option value="2024"  >2024</option>
+                                                        <option value="2023"  >2023</option>
+                                                        <option value="2022"  >2022</option>
+                                                        <option value="2021"  >2021</option>
+                                                        <option value="2020"  >2020</option>
+                                                        <option value="2019"  >2019</option>
+                                                        <option value="2018"  >2018</option>
+                                                        <option value="2017"  >2017</option>
+                                                        <option value="2016"  >2016</option>
+                                                        <option value="2015"  >2015</option>
+                                                        <option value="2014"  >2014</option>
+                                                        <option value="2013"  >2013</option>
+                                                        <option value="2012"  >2012</option>
+                                                        <option value="2011"  >2011</option>
+                                                        <option value="2010"  >2010</option>
+                                                        <option value="2009"  >2009</option>
+                                                        <option value="2008"  >2008</option>
+                                                        <option value="2007"  >2007</option>
+                                                        <option value="2006"  >2006</option>
+                                                        <option value="2005"  >2005</option>
+                                                        <option value="2004"  >2004</option>
+                                                        <option value="2003"  >2003</option>
+                                                        <option value="2002" selected="selected" >2002</option>
+                                                        <option value="2001"  >2001</option>
+                                                        <option value="2000"  >2000</option>
+                                                        <option value="1999"  >1999</option>
+                                                        <option value="1998"  >1998</option>
+                                                        <option value="1997"  >1997</option>
+                                                        <option value="1996"  >1996</option>
+                                                        <option value="1995"  >1995</option>
+                                                        <option value="1994"  >1994</option>
+                                                        <option value="1993"  >1993</option>
+                                                        <option value="1992"  >1992</option>
+                                                        <option value="1991"  >1991</option>
+                                                        <option value="1990"  >1990</option>
+                                                        <option value="1989"  >1989</option>
+                                                        <option value="1988"  >1988</option>
+                                                        <option value="1987"  >1987</option>
+                                                        <option value="1986"  >1986</option>
+                                                        <option value="1985"  >1985</option>
+                                                        <option value="1984"  >1984</option>
+                                                        <option value="1983"  >1983</option>
+                                                        <option value="1982"  >1982</option>
+                                                        <option value="1981"  >1981</option>
+                                                        <option value="1980"  >1980</option>
+                                                        <option value="1979"  >1979</option>
+                                                        <option value="1978"  >1978</option>
+                                                        <option value="1977"  >1977</option>
+                                                        <option value="1976"  >1976</option>
+                                                        <option value="1975"  >1975</option>
+                                                        <option value="1974"  >1974</option>
+                                                        <option value="1973"  >1973</option>
+                                                        <option value="1972"  >1972</option>
+                                                        <option value="1971"  >1971</option>
+                                                        <option value="1970"  >1970</option>
+                                                        <option value="1969"  >1969</option>
+                                                        <option value="1968"  >1968</option>
+                                                        <option value="1967"  >1967</option>
+                                                        <option value="1966"  >1966</option>
+                                                        <option value="1965"  >1965</option>
+                                                        <option value="1964"  >1964</option>
+                                                        <option value="1963"  >1963</option>
+                                                        <option value="1962"  >1962</option>
+                                                        <option value="1961"  >1961</option>
+                                                        <option value="1960"  >1960</option>
+                                                        <option value="1959"  >1959</option>
+                                                        <option value="1958"  >1958</option>
+                                                        <option value="1957"  >1957</option>
+                                                        <option value="1956"  >1956</option>
+                                                        <option value="1955"  >1955</option>
+                                                        <option value="1954"  >1954</option>
+                                                        <option value="1953"  >1953</option>
+                                                        <option value="1952"  >1952</option>
+                                                        <option value="1951"  >1951</option>
+                                                        <option value="1950"  >1950</option>
+                                                        <option value="1949"  >1949</option>
+                                                    </select>
+                    </div>
+                </div>
+                <div class="fecha">
+                    <div class="etiqueta"><p style="margin-left:-1px;">Hasta:</p></div>
+                    <div class="grupo_combos">
+                        <select id="mes2" name="mes2">
+                                                        <option value="1"  >Ene</option>
+                                                        <option value="2"  >Feb</option>
+                                                        <option value="3"  >Mar</option>
+                                                        <option value="4"  >Abr</option>
+                                                        <option value="5"  >May</option>
+                                                        <option value="6"  >Jun</option>
+                                                        <option value="7" selected="selected" >Jul</option>
+                                                        <option value="8"  >Ago</option>
+                                                        <option value="9"  >Sep</option>
+                                                        <option value="10"  >Oct</option>
+                                                        <option value="11"  >Nov</option>
+                                                        <option value="12"  >Dic</option>
+                                                    </select>
+                        <select id="anio2" name="anio2">
+                                                        <option value="2026" selected="selected" >2026</option>
+                                                        <option value="2025"  >2025</option>
+                                                        <option value="2024"  >2024</option>
+                                                        <option value="2023"  >2023</option>
+                                                        <option value="2022"  >2022</option>
+                                                        <option value="2021"  >2021</option>
+                                                        <option value="2020"  >2020</option>
+                                                        <option value="2019"  >2019</option>
+                                                        <option value="2018"  >2018</option>
+                                                        <option value="2017"  >2017</option>
+                                                        <option value="2016"  >2016</option>
+                                                        <option value="2015"  >2015</option>
+                                                        <option value="2014"  >2014</option>
+                                                        <option value="2013"  >2013</option>
+                                                        <option value="2012"  >2012</option>
+                                                        <option value="2011"  >2011</option>
+                                                        <option value="2010"  >2010</option>
+                                                        <option value="2009"  >2009</option>
+                                                        <option value="2008"  >2008</option>
+                                                        <option value="2007"  >2007</option>
+                                                        <option value="2006"  >2006</option>
+                                                        <option value="2005"  >2005</option>
+                                                        <option value="2004"  >2004</option>
+                                                        <option value="2003"  >2003</option>
+                                                        <option value="2002"  >2002</option>
+                                                        <option value="2001"  >2001</option>
+                                                        <option value="2000"  >2000</option>
+                                                        <option value="1999"  >1999</option>
+                                                        <option value="1998"  >1998</option>
+                                                        <option value="1997"  >1997</option>
+                                                        <option value="1996"  >1996</option>
+                                                        <option value="1995"  >1995</option>
+                                                        <option value="1994"  >1994</option>
+                                                        <option value="1993"  >1993</option>
+                                                        <option value="1992"  >1992</option>
+                                                        <option value="1991"  >1991</option>
+                                                        <option value="1990"  >1990</option>
+                                                        <option value="1989"  >1989</option>
+                                                        <option value="1988"  >1988</option>
+                                                        <option value="1987"  >1987</option>
+                                                        <option value="1986"  >1986</option>
+                                                        <option value="1985"  >1985</option>
+                                                        <option value="1984"  >1984</option>
+                                                        <option value="1983"  >1983</option>
+                                                        <option value="1982"  >1982</option>
+                                                        <option value="1981"  >1981</option>
+                                                        <option value="1980"  >1980</option>
+                                                        <option value="1979"  >1979</option>
+                                                        <option value="1978"  >1978</option>
+                                                        <option value="1977"  >1977</option>
+                                                        <option value="1976"  >1976</option>
+                                                        <option value="1975"  >1975</option>
+                                                        <option value="1974"  >1974</option>
+                                                        <option value="1973"  >1973</option>
+                                                        <option value="1972"  >1972</option>
+                                                        <option value="1971"  >1971</option>
+                                                        <option value="1970"  >1970</option>
+                                                        <option value="1969"  >1969</option>
+                                                        <option value="1968"  >1968</option>
+                                                        <option value="1967"  >1967</option>
+                                                        <option value="1966"  >1966</option>
+                                                        <option value="1965"  >1965</option>
+                                                        <option value="1964"  >1964</option>
+                                                        <option value="1963"  >1963</option>
+                                                        <option value="1962"  >1962</option>
+                                                        <option value="1961"  >1961</option>
+                                                        <option value="1960"  >1960</option>
+                                                        <option value="1959"  >1959</option>
+                                                        <option value="1958"  >1958</option>
+                                                        <option value="1957"  >1957</option>
+                                                        <option value="1956"  >1956</option>
+                                                        <option value="1955"  >1955</option>
+                                                        <option value="1954"  >1954</option>
+                                                        <option value="1953"  >1953</option>
+                                                        <option value="1952"  >1952</option>
+                                                        <option value="1951"  >1951</option>
+                                                        <option value="1950"  >1950</option>
+                                                        <option value="1949"  >1949</option>
+                                                    </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="consultar" style="margin-top:11px;">
+                <p>
+                    <input type="button" id="btnBuscar" name="btnBuscar" class="btnbuscar" value="" onclick="return Opciones('R','frmMensual','mensuales');"/>
+		      <input type="button" id="btnExportacionXls" name="btnExportacionXls" class="btnxlsx" value="" onclick="return Opciones('ENR','frmMensual','mensuales');"/>
+		      <input type="button" id="btnExportacionCsv" name="btnExportacionCsv" class="btncsv" value="" onclick="return Opciones('CSVNR','frmMensual','mensuales');"/>
+		      <input type="button" id="btnGrafico" name="btnGrafico" class="btngrafico" value="" onclick="return Opciones('GRR','frmMensual','mensuales');"/>	                   
+                </p>    
+				
+				
+
+				
+				
+				
+            </div>
+        </div>
+        <div class="opciones_salida"></div>
+    </div>
+
+    
+		<h1 class="categoria">Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación</h1>	
+<div class="url">
+ https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/PN01081MM/html  
+</div>
+
+
+		
+
+
+
+<div class="barra-resultados">        
+    <table title="" summary="" class="series">
+        <tr>
+			
+            <th class="cabecera">Fecha</th>
+                        <th class="cabecera" abbr="series">Bonos (millones S/) - Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación</th>
+                    </tr>
+
+                <tr>
+            <td class="periodo">
+            <b>Ene02</b>            </td>
+                        <td class="dato">
+            96            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb02</b>            </td>
+                        <td class="dato">
+            119            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar02</b>            </td>
+                        <td class="dato">
+            17            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr02</b>            </td>
+                        <td class="dato">
+            90            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May02</b>            </td>
+                        <td class="dato">
+            47            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun02</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul02</b>            </td>
+                        <td class="dato">
+            9            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago02</b>            </td>
+                        <td class="dato">
+            235            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep02</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct02</b>            </td>
+                        <td class="dato">
+            65            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov02</b>            </td>
+                        <td class="dato">
+            123            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic02</b>            </td>
+                        <td class="dato">
+            95            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene03</b>            </td>
+                        <td class="dato">
+            10            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb03</b>            </td>
+                        <td class="dato">
+            209            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar03</b>            </td>
+                        <td class="dato">
+            249            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr03</b>            </td>
+                        <td class="dato">
+            313            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May03</b>            </td>
+                        <td class="dato">
+            88            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun03</b>            </td>
+                        <td class="dato">
+            396            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul03</b>            </td>
+                        <td class="dato">
+            191            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago03</b>            </td>
+                        <td class="dato">
+            122            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep03</b>            </td>
+                        <td class="dato">
+            194            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct03</b>            </td>
+                        <td class="dato">
+            102            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov03</b>            </td>
+                        <td class="dato">
+            311            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic03</b>            </td>
+                        <td class="dato">
+            310            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene04</b>            </td>
+                        <td class="dato">
+            137            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb04</b>            </td>
+                        <td class="dato">
+            117            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar04</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr04</b>            </td>
+                        <td class="dato">
+            172            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May04</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun04</b>            </td>
+                        <td class="dato">
+            215            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul04</b>            </td>
+                        <td class="dato">
+            108            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago04</b>            </td>
+                        <td class="dato">
+            1046            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep04</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct04</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov04</b>            </td>
+                        <td class="dato">
+            124            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic04</b>            </td>
+                        <td class="dato">
+            38            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene05</b>            </td>
+                        <td class="dato">
+            68            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb05</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar05</b>            </td>
+                        <td class="dato">
+            148            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr05</b>            </td>
+                        <td class="dato">
+            405            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May05</b>            </td>
+                        <td class="dato">
+            330            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun05</b>            </td>
+                        <td class="dato">
+            60            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul05</b>            </td>
+                        <td class="dato">
+            49            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago05</b>            </td>
+                        <td class="dato">
+            360            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep05</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct05</b>            </td>
+                        <td class="dato">
+            79            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov05</b>            </td>
+                        <td class="dato">
+            211            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic05</b>            </td>
+                        <td class="dato">
+            51            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene06</b>            </td>
+                        <td class="dato">
+            185            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb06</b>            </td>
+                        <td class="dato">
+            365            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar06</b>            </td>
+                        <td class="dato">
+            39            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr06</b>            </td>
+                        <td class="dato">
+            463            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May06</b>            </td>
+                        <td class="dato">
+            55            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun06</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul06</b>            </td>
+                        <td class="dato">
+            461            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago06</b>            </td>
+                        <td class="dato">
+            117            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep06</b>            </td>
+                        <td class="dato">
+            138            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct06</b>            </td>
+                        <td class="dato">
+            511            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov06</b>            </td>
+                        <td class="dato">
+            288            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic06</b>            </td>
+                        <td class="dato">
+            107            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene07</b>            </td>
+                        <td class="dato">
+            152            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb07</b>            </td>
+                        <td class="dato">
+            121            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar07</b>            </td>
+                        <td class="dato">
+            307            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr07</b>            </td>
+                        <td class="dato">
+            248            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May07</b>            </td>
+                        <td class="dato">
+            48            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun07</b>            </td>
+                        <td class="dato">
+            85            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul07</b>            </td>
+                        <td class="dato">
+            188            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago07</b>            </td>
+                        <td class="dato">
+            60            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep07</b>            </td>
+                        <td class="dato">
+            101            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct07</b>            </td>
+                        <td class="dato">
+            420            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov07</b>            </td>
+                        <td class="dato">
+            286            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic07</b>            </td>
+                        <td class="dato">
+            256            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene08</b>            </td>
+                        <td class="dato">
+            59            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb08</b>            </td>
+                        <td class="dato">
+            40            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar08</b>            </td>
+                        <td class="dato">
+            154            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr08</b>            </td>
+                        <td class="dato">
+            256            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May08</b>            </td>
+                        <td class="dato">
+            108            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun08</b>            </td>
+                        <td class="dato">
+            235            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul08</b>            </td>
+                        <td class="dato">
+            127            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago08</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep08</b>            </td>
+                        <td class="dato">
+            73            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct08</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov08</b>            </td>
+                        <td class="dato">
+            30            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic08</b>            </td>
+                        <td class="dato">
+            61            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene09</b>            </td>
+                        <td class="dato">
+            125            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb09</b>            </td>
+                        <td class="dato">
+            81            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar09</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr09</b>            </td>
+                        <td class="dato">
+            313            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May09</b>            </td>
+                        <td class="dato">
+            231            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun09</b>            </td>
+                        <td class="dato">
+            227            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul09</b>            </td>
+                        <td class="dato">
+            66            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago09</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep09</b>            </td>
+                        <td class="dato">
+            397            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct09</b>            </td>
+                        <td class="dato">
+            232            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov09</b>            </td>
+                        <td class="dato">
+            1186            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic09</b>            </td>
+                        <td class="dato">
+            87            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene10</b>            </td>
+                        <td class="dato">
+            129            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb10</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar10</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr10</b>            </td>
+                        <td class="dato">
+            567            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May10</b>            </td>
+                        <td class="dato">
+            143            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun10</b>            </td>
+                        <td class="dato">
+            201            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul10</b>            </td>
+                        <td class="dato">
+            351            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago10</b>            </td>
+                        <td class="dato">
+            132            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep10</b>            </td>
+                        <td class="dato">
+            88            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct10</b>            </td>
+                        <td class="dato">
+            140            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov10</b>            </td>
+                        <td class="dato">
+            42            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic10</b>            </td>
+                        <td class="dato">
+            163            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene11</b>            </td>
+                        <td class="dato">
+            181            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar11</b>            </td>
+                        <td class="dato">
+            60            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May11</b>            </td>
+                        <td class="dato">
+            102            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul11</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct11</b>            </td>
+                        <td class="dato">
+            187            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov11</b>            </td>
+                        <td class="dato">
+            95            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic11</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene12</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb12</b>            </td>
+                        <td class="dato">
+            188            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar12</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr12</b>            </td>
+                        <td class="dato">
+            40            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May12</b>            </td>
+                        <td class="dato">
+            110            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun12</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul12</b>            </td>
+                        <td class="dato">
+            66            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago12</b>            </td>
+                        <td class="dato">
+            140            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep12</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct12</b>            </td>
+                        <td class="dato">
+            511            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov12</b>            </td>
+                        <td class="dato">
+            144            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic12</b>            </td>
+                        <td class="dato">
+            77            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene13</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb13</b>            </td>
+                        <td class="dato">
+            103            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar13</b>            </td>
+                        <td class="dato">
+            120            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr13</b>            </td>
+                        <td class="dato">
+            50            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May13</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun13</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul13</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago13</b>            </td>
+                        <td class="dato">
+            98            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep13</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct13</b>            </td>
+                        <td class="dato">
+            83            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov13</b>            </td>
+                        <td class="dato">
+            110            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic13</b>            </td>
+                        <td class="dato">
+            143            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb14</b>            </td>
+                        <td class="dato">
+            85            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr14</b>            </td>
+                        <td class="dato">
+            220            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun14</b>            </td>
+                        <td class="dato">
+            299            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul14</b>            </td>
+                        <td class="dato">
+            56            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep14</b>            </td>
+                        <td class="dato">
+            422            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov14</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic14</b>            </td>
+                        <td class="dato">
+            116            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene15</b>            </td>
+                        <td class="dato">
+            561            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb15</b>            </td>
+                        <td class="dato">
+            290            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar15</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr15</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May15</b>            </td>
+                        <td class="dato">
+            502            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun15</b>            </td>
+                        <td class="dato">
+            153            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul15</b>            </td>
+                        <td class="dato">
+            533            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago15</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep15</b>            </td>
+                        <td class="dato">
+            151            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct15</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov15</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic15</b>            </td>
+                        <td class="dato">
+            364            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene16</b>            </td>
+                        <td class="dato">
+            4            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb16</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar16</b>            </td>
+                        <td class="dato">
+            340            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr16</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May16</b>            </td>
+                        <td class="dato">
+            130            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun16</b>            </td>
+                        <td class="dato">
+            513            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul16</b>            </td>
+                        <td class="dato">
+            436            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago16</b>            </td>
+                        <td class="dato">
+            296            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep16</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct16</b>            </td>
+                        <td class="dato">
+            712            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov16</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic16</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene17</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb17</b>            </td>
+                        <td class="dato">
+            162            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar17</b>            </td>
+                        <td class="dato">
+            400            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr17</b>            </td>
+                        <td class="dato">
+            372            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May17</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun17</b>            </td>
+                        <td class="dato">
+            554            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul17</b>            </td>
+                        <td class="dato">
+            282            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago17</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep17</b>            </td>
+                        <td class="dato">
+            560            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct17</b>            </td>
+                        <td class="dato">
+            135            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov17</b>            </td>
+                        <td class="dato">
+            134            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic17</b>            </td>
+                        <td class="dato">
+            183            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene18</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb18</b>            </td>
+                        <td class="dato">
+            200            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar18</b>            </td>
+                        <td class="dato">
+            100            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr18</b>            </td>
+                        <td class="dato">
+            107            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May18</b>            </td>
+                        <td class="dato">
+            133            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun18</b>            </td>
+                        <td class="dato">
+            252            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul18</b>            </td>
+                        <td class="dato">
+            551            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago18</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep18</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct18</b>            </td>
+                        <td class="dato">
+            487            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov18</b>            </td>
+                        <td class="dato">
+            300            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic18</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene19</b>            </td>
+                        <td class="dato">
+            570            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb19</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar19</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr19</b>            </td>
+                        <td class="dato">
+            83            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May19</b>            </td>
+                        <td class="dato">
+            130            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun19</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul19</b>            </td>
+                        <td class="dato">
+            240            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago19</b>            </td>
+                        <td class="dato">
+            6            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep19</b>            </td>
+                        <td class="dato">
+            343            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct19</b>            </td>
+                        <td class="dato">
+            171            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov19</b>            </td>
+                        <td class="dato">
+            182            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic19</b>            </td>
+                        <td class="dato">
+            20            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb20</b>            </td>
+                        <td class="dato">
+            33            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar20</b>            </td>
+                        <td class="dato">
+            14            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May20</b>            </td>
+                        <td class="dato">
+            3            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul20</b>            </td>
+                        <td class="dato">
+            1            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov20</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic20</b>            </td>
+                        <td class="dato">
+            298            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr21</b>            </td>
+                        <td class="dato">
+            108            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov21</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic21</b>            </td>
+                        <td class="dato">
+            19            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar22</b>            </td>
+                        <td class="dato">
+            10            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic22</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov23</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic23</b>            </td>
+                        <td class="dato">
+            175            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct24</b>            </td>
+                        <td class="dato">
+            110            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov24</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic24</b>            </td>
+                        <td class="dato">
+            101            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene25</b>            </td>
+                        <td class="dato">
+            2            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb25</b>            </td>
+                        <td class="dato">
+            2            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Ago25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Sep25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Oct25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Nov25</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Dic25</b>            </td>
+                        <td class="dato">
+            220            </td>
+                    </tr>
+                <tr>
+            <td class="periodo">
+            <b>Ene26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Feb26</b>            </td>
+                        <td class="dato">
+            280            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Mar26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Abr26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>May26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jun26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    <tr>
+            <td class="periodo">
+            <b>Jul26</b>            </td>
+                        <td class="dato">
+            0            </td>
+                    </tr>
+            </table>
+</div>
+	
+		
+	
+	
+<table title="" summary="">
+
+
+
+
+
+
+
+
+
+
+    <tr>
+        <td style="text-align: right">
+            <input type="hidden" name="format" id="format" value=""/>
+            <input type="hidden" name="accion" id="accion" value=""/>
+            <input type="hidden" name="sufijo" id="sufijo" value="Jul26"/>
+            <input type="hidden" name="anio11" id="anio11" value="2002"/>
+            <input type="hidden" name="anio22" id="anio22" value="2026"/>
+            <input type="hidden" name="mes11" id="mes11" value="1"/>
+            <input type="hidden" name="mes22" id="mes22" value="7"/>
+            <input type="hidden" name="dia11" id="dia11" value="0"/>
+            <input type="hidden" name="dia22" id="dia22" value="0"/>
+            <input type="hidden" name="codigos" id="codigos" value="'PN01081MM'"/>
+	    <input type="hidden" id="codigosurl" name="codigosurl" value="PN01081MM" />
+	     <input type="hidden" name="grupos" id="grupos" value=""/>
+	    <input type="hidden" id="idiomas" name="idiomas" value="resultados" />
+        </td>
+    </tr>
+</table>
+</form>
+
+  </td>
+</tr>
+
+</table>
+</div>
+
+
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=28&cb=1190959487" async></script></body>
+		<div class="footer-personalizado" id="footer-personalizado-principal">
+			<address class="wrapper-footer-sections datosfooter">
+			Jr. Santa Rosa 441-445, Lima-1, Perú <br>
+			Teléfono:  (511) 613 2000
+			</address>
+		</div>
+
+<script language="javascript" type="text/javascript">
+	if(document.forms[0])
+	update_counter(document.forms[0].id);
+
+	$("#button-back-nav-link").on("click", function(e) {
+		//history.go(-1);
+		console.log(document.referrer);
+		history.back();
+	});
+</script>
+
+</html>
+

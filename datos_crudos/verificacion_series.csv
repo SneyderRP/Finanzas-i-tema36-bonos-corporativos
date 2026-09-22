@@ -1,0 +1,14 @@
+variable,codigo,periodos,validos,desde,hasta
+coloc_arrendamiento,PN01068MM,180,180,2011-01-01,2025-12-01
+coloc_corporativos,PN01081MM,180,180,2011-01-01,2025-12-01
+coloc_sector_privado,PN01064MM,180,180,2011-01-01,2025-12-01
+coloc_titulizacion,PN01084MM,180,180,2011-01-01,2025-12-01
+embig_peru,PN01129XM,180,180,2011-01-01,2025-12-01
+rend_soberano_10a_pen,PD31895MM,180,180,2011-01-01,2025-12-01
+rend_soberano_10a_usd,PD31896MM,180,180,2011-01-01,2025-12-01
+saldo_corporativos,PN01101MM,180,180,2011-01-01,2025-12-01
+saldo_plazo_3a_5a,PN01104MM,180,180,2011-01-01,2025-12-01
+saldo_plazo_hasta_3a,PN01103MM,180,180,2011-01-01,2025-12-01
+tasa_corp_mas360_mn,PN07842NM,180,180,2011-01-01,2025-12-01
+tasa_pref_corp_90d_mn,PN07809NM,180,180,2011-01-01,2025-12-01
+tasa_referencia,PD04722MM,180,180,2011-01-01,2025-12-01

@@ -1,0 +1,34 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              log_monto   R-squared:                       0.769
+Model:                            OLS   Adj. R-squared:                  0.768
+Method:                 Least Squares   F-statistic:                     3.749
+Date:                Tue, 22 Sep 2026   Prob (F-statistic):             0.0733
+Time:                        00:20:15   Log-Likelihood:                -2521.1
+No. Observations:                1260   AIC:                             5064.
+Df Residuals:                    1249   BIC:                             5121.
+Df Model:                          10                                         
+Covariance Type:              cluster                                         
+==========================================================================================================
+                                             coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------------------------
+Intercept                                  3.5435      0.950      3.729      0.000       1.681       5.406
+C(instrumento)[T.coloc_corporativos]       1.3667   2.78e-14   4.92e+13      0.000       1.367       1.367
+C(instrumento)[T.coloc_sector_privado]     2.7293   2.39e-14   1.14e+14      0.000       2.729       2.729
+C(instrumento)[T.coloc_titulizacion]      -0.2937   2.24e-14  -1.31e+13      0.000      -0.294      -0.294
+C(instrumento)[T.saldo_corporativos]       8.7226   2.28e-14   3.83e+14      0.000       8.723       8.723
+C(instrumento)[T.saldo_plazo_3a_5a]        6.6887   2.24e-14   2.98e+14      0.000       6.689       6.689
+C(instrumento)[T.saldo_plazo_hasta_3a]     5.2643   2.24e-14   2.35e+14      0.000       5.264       5.264
+tasa_referencia                           -0.6510      0.218     -2.988      0.003      -1.078      -0.224
+prima_plazo                               -0.6744      0.201     -3.355      0.001      -1.068      -0.280
+riesgo_pais_pct                            0.5105      0.265      1.927      0.054      -0.009       1.030
+spread_bancario                            0.2988      0.268      1.117      0.264      -0.226       0.823
+==============================================================================
+Omnibus:                       20.797   Durbin-Watson:                   1.304
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               35.630
+Skew:                          -0.087   Prob(JB):                     1.83e-08
+Kurtosis:                       3.805   Cond. No.                         40.4
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (CRV1)

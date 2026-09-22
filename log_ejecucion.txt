@@ -1,0 +1,120 @@
+[2026-09-21 03:50:56] Crudo unificado desde 13 series | filas=180 | columnas=14
+[2026-09-21 03:52:14] Panel construido | filas=1260
+[2026-09-21 03:52:14] SHA-256 del procesado: 92574a78aa72ad9c0cf5ee679fb2b455b3c46823c5341140d11bf42cc3a83dbd
+[2026-09-21 04:39:21] GET PN01064MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01064MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:21] coloc_sector_privado <- Bonos (millones S/) - Sector Privado - Colocación
+[2026-09-21 04:39:21] Guardado coloc_sector_privado__PN01064MM.csv | filas=180
+[2026-09-21 04:39:23] GET PN01081MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01081MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:23] coloc_corporativos <- Bonos (millones S/) - Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación
+[2026-09-21 04:39:23] Guardado coloc_corporativos__PN01081MM.csv | filas=180
+[2026-09-21 04:39:26] GET PN01068MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01068MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:26] coloc_arrendamiento <- Bonos (millones S/) - Sector Privado - Bonos de Entidades Financieras - Bonos de Arrendamiento Financiero - Colocación
+[2026-09-21 04:39:26] Guardado coloc_arrendamiento__PN01068MM.csv | filas=180
+[2026-09-21 04:39:27] GET PN01084MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01084MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:27] coloc_titulizacion <- Bonos (millones S/) - Sector Privado - Bonos de Entidades No Financieras - Bonos de Titulización - Colocación
+[2026-09-21 04:39:27] Guardado coloc_titulizacion__PN01084MM.csv | filas=180
+[2026-09-21 04:39:29] GET PN01101MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01101MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:29] saldo_corporativos <- Bonos del sector privado por moneda y plazo - Saldos - Por Tipo - Corporativos (millones S/)
+[2026-09-21 04:39:30] Guardado saldo_corporativos__PN01101MM.csv | filas=180
+[2026-09-21 04:39:32] GET PN01103MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01103MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:32] saldo_plazo_hasta_3a <- Bonos del sector privado por moneda y plazo - Saldos - Por Plazo - Hasta 3 años (millones S/)
+[2026-09-21 04:39:32] Guardado saldo_plazo_hasta_3a__PN01103MM.csv | filas=180
+[2026-09-21 04:39:34] GET PN01104MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01104MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:34] saldo_plazo_3a_5a <- Bonos del sector privado por moneda y plazo - Saldos - Por Plazo - De 3 hasta 5 años (millones S/)
+[2026-09-21 04:39:34] Guardado saldo_plazo_3a_5a__PN01104MM.csv | filas=180
+[2026-09-21 04:39:35] GET PD04722MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04722MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:35] tasa_referencia <- Tasas de interés del Banco Central de Reserva - Tasa de Referencia de la Política Monetaria
+[2026-09-21 04:39:35] Guardado tasa_referencia__PD04722MM.csv | filas=180
+[2026-09-21 04:39:37] GET PD31895MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD31895MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:37] rend_soberano_10a_pen <- Tasas de interés de bonos del gobierno peruano - Rendimiento del Bono del gobierno peruano a 10 años (en S/)
+[2026-09-21 04:39:37] Guardado rend_soberano_10a_pen__PD31895MM.csv | filas=180
+[2026-09-21 04:39:39] GET PD31896MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD31896MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:39] rend_soberano_10a_usd <- Tasas de interés de bonos del gobierno peruano - Rendimiento del Bono del gobierno peruano a 10 años (en US$)
+[2026-09-21 04:39:39] Guardado rend_soberano_10a_usd__PD31896MM.csv | filas=180
+[2026-09-21 04:39:41] GET PN01129XM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01129XM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:41] embig_peru <- Indicadores de riesgo para países emergentes: EMBIG - Diferencial de Rendimientos del Índice de Bonos de Mercados Emergentes (EMBIG) - Perú
+[2026-09-21 04:39:41] Guardado embig_peru__PN01129XM.csv | filas=180
+[2026-09-21 04:39:43] GET PN07809NM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN07809NM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:43] tasa_pref_corp_90d_mn <- Tasas de interés activas y pasivas promedio de las empresas bancarias en MN (términos efectivos anuales) - Activas - Preferencial Corporativa a 90 días
+[2026-09-21 04:39:43] Guardado tasa_pref_corp_90d_mn__PN07809NM.csv | filas=180
+[2026-09-21 04:39:45] GET PN07842NM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN07842NM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-21 04:39:45] tasa_corp_mas360_mn <- Tasas de interés activas promedio de las empresas bancarias por modalidad (términos efectivos anuales) - MN - Corporativo, Grandes y Medianas Empresas - Préstamos - Más 360 días
+[2026-09-21 04:39:45] Guardado tasa_corp_mas360_mn__PN07842NM.csv | filas=180
+[2026-09-21 04:39:47] Crudo unificado datos_crudos_api_2024200522B.csv | filas=180
+[2026-09-21 04:39:56] GET verificacion HTML PN01081MM | HTTP 200
+[2026-09-21 04:39:58] Tabla HTML parseada y guardada | filas=295
+[2026-09-21 04:39:58] API: 180 periodos | Web: 295 filas
+[2026-09-21 04:40:18] Leido crudo de la API | filas=180
+[2026-09-21 04:40:18] Panel construido datos_procesados_2024200522B.csv | filas=1260
+[2026-09-21 04:40:18] SHA-256 del procesado: 92574a78aa72ad9c0cf5ee679fb2b455b3c46823c5341140d11bf42cc3a83dbd
+[2026-09-21 04:40:37] Analisis: panel cargado | filas=1260
+[2026-09-21 04:40:37] Salida generada: tabla1_descriptiva
+[2026-09-21 04:40:37] Salida generada: tabla2_por_instrumento
+[2026-09-21 04:40:37] Salida generada: tabla3_panel_efectos_fijos
+[2026-09-21 04:40:37] Panel con efectos fijos estimado | N=1260
+[2026-09-21 04:40:37] Salida generada: tabla4_robustez_corporativos
+[2026-09-21 04:40:38] Salida generada: figura1_colocacion_anual.png
+[2026-09-21 04:40:39] Salida generada: figura2_tasas_y_riesgo.png
+[2026-09-21 04:40:40] Salida generada: figura3_tasa_vs_colocacion.png
+[2026-09-21 04:40:41] Salida generada: figura4_saldos_por_plazo.png
+[2026-09-21 04:40:41] Analisis terminado. Salidas en /salidas.
+[2026-09-22 00:19:27] Crudo unificado desde 13 series | filas=180 | columnas=14
+[2026-09-22 00:19:29] Panel construido | filas=1260
+[2026-09-22 00:19:29] SHA-256 del procesado: 92574a78aa72ad9c0cf5ee679fb2b455b3c46823c5341140d11bf42cc3a83dbd
+[2026-09-22 00:19:37] GET PN01064MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01064MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:37] coloc_sector_privado <- Bonos (millones S/) - Sector Privado - Colocación
+[2026-09-22 00:19:37] Guardado coloc_sector_privado__PN01064MM.csv | filas=180
+[2026-09-22 00:19:39] GET PN01081MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01081MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:39] coloc_corporativos <- Bonos (millones S/) - Sector Privado - Bonos de Entidades No Financieras - Bonos Corporativos - Colocación
+[2026-09-22 00:19:39] Guardado coloc_corporativos__PN01081MM.csv | filas=180
+[2026-09-22 00:19:41] GET PN01068MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01068MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:41] coloc_arrendamiento <- Bonos (millones S/) - Sector Privado - Bonos de Entidades Financieras - Bonos de Arrendamiento Financiero - Colocación
+[2026-09-22 00:19:41] Guardado coloc_arrendamiento__PN01068MM.csv | filas=180
+[2026-09-22 00:19:43] GET PN01084MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01084MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:43] coloc_titulizacion <- Bonos (millones S/) - Sector Privado - Bonos de Entidades No Financieras - Bonos de Titulización - Colocación
+[2026-09-22 00:19:43] Guardado coloc_titulizacion__PN01084MM.csv | filas=180
+[2026-09-22 00:19:45] GET PN01101MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01101MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:45] saldo_corporativos <- Bonos del sector privado por moneda y plazo - Saldos - Por Tipo - Corporativos (millones S/)
+[2026-09-22 00:19:45] Guardado saldo_corporativos__PN01101MM.csv | filas=180
+[2026-09-22 00:19:47] GET PN01103MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01103MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:47] saldo_plazo_hasta_3a <- Bonos del sector privado por moneda y plazo - Saldos - Por Plazo - Hasta 3 años (millones S/)
+[2026-09-22 00:19:47] Guardado saldo_plazo_hasta_3a__PN01103MM.csv | filas=180
+[2026-09-22 00:19:49] GET PN01104MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01104MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:49] saldo_plazo_3a_5a <- Bonos del sector privado por moneda y plazo - Saldos - Por Plazo - De 3 hasta 5 años (millones S/)
+[2026-09-22 00:19:49] Guardado saldo_plazo_3a_5a__PN01104MM.csv | filas=180
+[2026-09-22 00:19:51] GET PD04722MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04722MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:51] tasa_referencia <- Tasas de interés del Banco Central de Reserva - Tasa de Referencia de la Política Monetaria
+[2026-09-22 00:19:51] Guardado tasa_referencia__PD04722MM.csv | filas=180
+[2026-09-22 00:19:53] GET PD31895MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD31895MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:53] rend_soberano_10a_pen <- Tasas de interés de bonos del gobierno peruano - Rendimiento del Bono del gobierno peruano a 10 años (en S/)
+[2026-09-22 00:19:53] Guardado rend_soberano_10a_pen__PD31895MM.csv | filas=180
+[2026-09-22 00:19:55] GET PD31896MM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD31896MM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:55] rend_soberano_10a_usd <- Tasas de interés de bonos del gobierno peruano - Rendimiento del Bono del gobierno peruano a 10 años (en US$)
+[2026-09-22 00:19:55] Guardado rend_soberano_10a_usd__PD31896MM.csv | filas=180
+[2026-09-22 00:19:57] GET PN01129XM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01129XM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:57] embig_peru <- Indicadores de riesgo para países emergentes: EMBIG - Diferencial de Rendimientos del Índice de Bonos de Mercados Emergentes (EMBIG) - Perú
+[2026-09-22 00:19:57] Guardado embig_peru__PN01129XM.csv | filas=180
+[2026-09-22 00:19:59] GET PN07809NM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN07809NM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:19:59] tasa_pref_corp_90d_mn <- Tasas de interés activas y pasivas promedio de las empresas bancarias en MN (términos efectivos anuales) - Activas - Preferencial Corporativa a 90 días
+[2026-09-22 00:19:59] Guardado tasa_pref_corp_90d_mn__PN07809NM.csv | filas=180
+[2026-09-22 00:20:01] GET PN07842NM -> https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN07842NM/json/2011-1/2025-12/esp | HTTP 200
+[2026-09-22 00:20:01] tasa_corp_mas360_mn <- Tasas de interés activas promedio de las empresas bancarias por modalidad (términos efectivos anuales) - MN - Corporativo, Grandes y Medianas Empresas - Préstamos - Más 360 días
+[2026-09-22 00:20:01] Guardado tasa_corp_mas360_mn__PN07842NM.csv | filas=180
+[2026-09-22 00:20:02] Crudo unificado datos_crudos_api_2024200522B.csv | filas=180
+[2026-09-22 00:20:05] GET verificacion HTML PN01081MM | HTTP 200
+[2026-09-22 00:20:07] Tabla HTML parseada y guardada | filas=295
+[2026-09-22 00:20:07] API: 180 periodos | Web: 295 filas
+[2026-09-22 00:20:08] Leido crudo de la API | filas=180
+[2026-09-22 00:20:08] Panel construido datos_procesados_2024200522B.csv | filas=1260
+[2026-09-22 00:20:08] SHA-256 del procesado: 92574a78aa72ad9c0cf5ee679fb2b455b3c46823c5341140d11bf42cc3a83dbd
+[2026-09-22 00:20:12] Analisis: panel cargado | filas=1260
+[2026-09-22 00:20:13] Salida generada: tabla1_descriptiva
+[2026-09-22 00:20:14] Salida generada: tabla2_por_instrumento
+[2026-09-22 00:20:15] Salida generada: tabla3_panel_efectos_fijos
+[2026-09-22 00:20:16] Panel con efectos fijos estimado | N=1260
+[2026-09-22 00:20:17] Salida generada: tabla4_robustez_corporativos
+[2026-09-22 00:20:19] Salida generada: figura1_colocacion_anual.png
+[2026-09-22 00:20:20] Salida generada: figura2_tasas_y_riesgo.png
+[2026-09-22 00:20:21] Salida generada: figura3_tasa_vs_colocacion.png
+[2026-09-22 00:20:22] Salida generada: figura4_saldos_por_plazo.png
+[2026-09-22 00:20:22] Analisis terminado. Salidas en /salidas.

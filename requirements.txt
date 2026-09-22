@@ -1,0 +1,10 @@
+# Finanzas I (055D) - Tema 36 - ROJAS POMA MEGLINHO SNEYDER - 2024200522B
+# Versiones exactas del entorno de ejecucion (numeral 2.4.2)
+beautifulsoup4==4.13.5
+lxml==6.1.2
+matplotlib==3.10.0
+numpy==2.1.3
+openpyxl==3.1.5
+pandas==2.2.3
+requests==2.32.4
+statsmodels==0.15.0
