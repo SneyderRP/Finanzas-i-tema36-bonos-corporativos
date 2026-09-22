@@ -86,8 +86,8 @@ variables por si se incorpora una fuente con token.
 
 | Campo | Valor |
 |---|---|
-| URL | (COMPLETAR) |
-| Commits | (COMPLETAR: mínimo tres, en fechas distintas) |
+| URL | https://github.com/SneyderRP/Finanzas-i-tema36-bonos-corporativos |
+| Commits | 1 de 3. Historial en la pestaña Commits del repositorio |
 
 ## 9. Trazabilidad de tablas y figuras
 
