@@ -8,15 +8,16 @@
 
 ## 1. Objetivo
 
-Analizar los determinantes del monto colocado de bonos en el mercado peruano
-según el costo de oportunidad del financiamiento y el riesgo país, distinguiendo
-por tipo de instrumento y por tramo de plazo.
+Analizar los determinantes del rendimiento de los bonos del gobierno peruano a
+10 años, tasa base sobre la que se fija el costo de cualquier emisión corporativa
+local, a partir de la política monetaria doméstica, las condiciones financieras
+globales y el riesgo país.
 
-**Diseño:** panel de 7 instrumentos × 180 meses = 1260 observaciones.
-**Llave:** `instrumento` + `fecha`.
-**Dependiente:** `log_monto` = ln(1 + monto en millones de S/).
-**Explicativas:** tasa de referencia, prima por plazo, riesgo país (EMBIG) y
-spread bancario corporativo, con efectos fijos por instrumento.
+**Estructura:** serie de tiempo diaria, 2011-2025.
+**Observaciones:** 3692 días hábiles con las cinco series publicadas.
+**Dependiente:** variación diaria del rendimiento del bono peruano a 10 años.
+**Explicativas:** tasa de referencia del BCRP, rendimiento del Tesoro de EE.UU.
+a 10 años, riesgo país (EMBIG Perú) y tasa interbancaria en soles.
 
 ## 2. Fuente y endpoint
 
@@ -25,25 +26,25 @@ spread bancario corporativo, con efectos fijos por instrumento.
 | Fuente | BCRPData, Banco Central de Reserva del Perú |
 | Tipo | API REST pública, sin clave de acceso |
 | Endpoint | `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{código}/json/{inicio}/{fin}/esp` |
-| Series | 13, todas mensuales. Ver `diccionario_variables.md` |
-| Fecha de consulta | 2026-09-22 |
+| Series | 5, todas diarias. Ver `diccionario_variables.md` |
+| Fecha de consulta | 2026-09-23 |
 
-Cada serie se descarga por separado y se guarda en `datos_crudos/por_variable/`,
-para poder cotejarla una por una con la fuente oficial (numeral 2.4.6).
+Cada serie se descarga por separado y se guarda en `datos_crudos/diarias/`, para
+poder cotejarla contra la fuente oficial una por una (numeral 2.4.6).
 
 **Vía 2.** El numeral 2.4.1 exige una sola vía automatizada en la Unidad I,
-preferentemente API, y la vía API cubre el 100 % de las variables. Se entrega
-`02_scraping_web.py` como verificación cruzada opcional.
+preferentemente API, y la vía API cubre el 100 % de las variables del modelo.
+La exploración del portal de la SMV está documentada en `incidencias_fuente.md`.
 
 ## 3. Ventana congelada (numeral 2.4.5)
 
 | Parámetro | Valor |
 |---|---|
-| `FECHA_INICIO` | 2011-01-01 |
-| `FECHA_CORTE` | 2025-12-31 |
+| `INICIO` | 2011-01-01 |
+| `FIN` | 2025-12-31 |
 
-Declarados como constantes en `codigo/00_config.py`. Ningún script usa la fecha
-del día, para que la consulta sea reproducible.
+Declarados como constantes en `codigo/01_extraccion_api.py`. Ningún script usa
+la fecha del día.
 
 ## 4. Orden de ejecución
 
@@ -51,10 +52,9 @@ del día, para que la consulta sea reproducible.
 cd codigo
 pip install -r ../requirements.txt
 
-python 01_extraccion_api.py    # vía API      -> /datos_crudos
-python 02_scraping_web.py      # verificación -> /datos_crudos
-python 03_limpieza_datos.py    # panel        -> /datos_procesados
-python 04_analisis.py          # tablas y figuras -> /salidas
+python 01_extraccion_api.py    # 5 series diarias   -> /datos_crudos
+python 03_limpieza_datos.py    # limpieza y tabla   -> /datos_procesados
+python 04_analisis.py          # tablas y figuras   -> /salidas
 ```
 
 ## 5. Versiones
@@ -69,50 +69,85 @@ python 04_analisis.py          # tablas y figuras -> /salidas
 
 | Campo | Valor |
 |---|---|
-| Archivo | `datos_procesados/datos_procesados_2024200522B.csv` |
-| SHA-256 | `92574a78aa72ad9c0cf5ee679fb2b455b3c46823c5341140d11bf42cc3a83dbd` |
-| Filas | 1260 |
-| Columnas | 19 |
+| Archivo | `datos_procesados/tabla_final_2024200522B.csv` |
+| SHA-256 | `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f` |
+| Filas | 3692 |
+| Columnas | 7 |
 
 El hash se coteja contra el archivo entregado, nunca contra una reejecución
 posterior (numeral 2.4.5).
 
-## 7. Claves de API
+## 7. Tratamiento de datos faltantes
 
-Ninguna fuente usada exige clave. Se entrega `.env.example` con los nombres de
-variables por si se incorpora una fuente con token.
+**No se rellenó ningún hueco.** De los 3 913 días calendario del rango, se
+conservan los 3692 en que las cinco series publicaron dato. Los 221
+descartados corresponden a feriados y días sin negociación, distintos entre el
+mercado peruano y el estadounidense.
 
-## 8. Repositorio
+Rellenar esos días con el último valor conocido habría conservado más
+observaciones, pero habría producido celdas sin respaldo en la fuente para esa
+fecha. Con el criterio adoptado, **cada celda del archivo final existe en
+BCRPData** y resiste el cotejo del numeral 2.4.6.
+
+## 8. Claves de API
+
+Ninguna fuente usada exige clave. **BCRPData es una API pública de acceso
+libre.** El docente puede ejecutar `01_extraccion_api.py` sin configurar nada.
+Se entrega `.env.example` por si se incorpora una fuente con token.
+
+## 9. Repositorio
 
 | Campo | Valor |
 |---|---|
 | URL | https://github.com/SneyderRP/Finanzas-i-tema36-bonos-corporativos |
-| Commits | 1 de 3. Historial en la pestaña Commits del repositorio |
+| Commits | ver la pestaña Commits del repositorio |
 
-## 9. Trazabilidad de tablas y figuras
+## 10. Trazabilidad de tablas y figuras
 
 Todas se regeneran con `04_analisis.py`:
 
-| Salida | Archivo | Sección del artículo |
+| Salida | Archivo | Sección |
 |---|---|---|
 | Tabla 1 | `salidas/tabla1_descriptiva.tex` | Materiales y métodos |
-| Tabla 2 | `salidas/tabla2_por_instrumento.tex` | Materiales y métodos |
-| Tabla 3 | `salidas/tabla3_panel_efectos_fijos.tex` | Resultados |
-| Tabla 4 | `salidas/tabla4_robustez_corporativos.tex` | Resultados |
-| Figura 1 | `salidas/figura1_colocacion_anual.png` | Resultados |
-| Figura 2 | `salidas/figura2_tasas_y_riesgo.png` | Resultados |
-| Figura 3 | `salidas/figura3_tasa_vs_colocacion.png` | Resultados |
-| Figura 4 | `salidas/figura4_saldos_por_plazo.png` | Resultados |
+| Tabla 2 | `salidas/tabla2_adf.tex` | Materiales y métodos |
+| Tabla 3 | `salidas/tabla3_niveles.tex` | Resultados (diagnóstico) |
+| Tabla 4 | `salidas/tabla4_variaciones.tex` | Resultados (modelo principal) |
+| Figura 1 | `salidas/figura1_series_diarias.png` | Resultados |
+| Figura 2 | `salidas/figura2_spread_soberano.png` | Resultados |
+| Figura 3 | `salidas/figura3_variaciones.png` | Resultados |
+| Figura 4 | `salidas/figura4_riesgo_vs_rendimiento.png` | Resultados |
 
-## 10. Citación en APA 7 (numeral 2.4.8)
+## 11. Nota metodológica
 
-Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos estadísticos*
-[Conjunto de datos]. Consultado el 2026-09-22.
+La regresión en niveles arroja R² de 0,787 pero Durbin-Watson de 0,038, muy
+lejos del valor 2 esperado. La prueba de Dickey-Fuller aumentada no rechaza la
+hipótesis de raíz unitaria en niveles para cuatro de las cinco series. Se trata
+del patrón característico de regresión espuria.
+
+El modelo principal se estima por tanto sobre las **variaciones diarias**, con
+R² de 0,139 y Durbin-Watson de 2,087. Ambas estimaciones se reportan: la primera
+como diagnóstico, la segunda como resultado.
+
+Los errores estándar son robustos a heterocedasticidad y autocorrelación
+(Newey-West, 5 rezagos).
+
+## 12. Versión anterior
+
+La carpeta `version_mensual_descartada/` conserva el primer diseño, un panel de
+7 instrumentos de bonos × 180 meses. Se descartó porque mezclaba flujos
+(colocaciones) con stocks (saldos) e incluía el agregado del sector privado
+junto con sus componentes. Se mantiene como evidencia del proceso de trabajo.
+
+## 13. Citación en APA 7 (numeral 2.4.8)
+
+Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-23.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/
 
-## 11. Declaración sobre el uso de IA
+## 14. Declaración sobre el uso de IA
 
 Se usó asistencia de IA para redactar y depurar el código de extracción, dentro
 de lo permitido por la consigna. El estudiante verificó cada código de serie
-contra el catálogo oficial del BCRP, cotejó los datos con la fuente y puede
-explicar cada bloque del código durante la disertación.
+contra el catálogo oficial del BCRP, cotejó diez observaciones al azar contra la
+fuente en vivo con resultado de coincidencia total, y puede explicar cada bloque
+del código durante la disertación.

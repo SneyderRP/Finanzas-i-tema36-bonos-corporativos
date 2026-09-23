@@ -1,88 +1,113 @@
 # Diccionario de variables
 
-**Archivo:** `datos_procesados/datos_procesados_2024200522B.csv`
+**Archivo:** `datos_procesados/tabla_final_2024200522B.csv`
 **Estudiante:** ROJAS POMA, MEGLINHO SNEYDER — 2024200522B
-**Estructura:** panel. Una fila = un instrumento en un mes.
-**Llave:** `instrumento` + `fecha` · **Ventana:** 2011-01 a 2025-12 (180 meses × 7 = 1260 obs.)
-**Fuente única:** BCRPData, Banco Central de Reserva del Perú. API REST pública, sin clave.
+**Tema 36:** Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
+
+**Estructura:** serie de tiempo diaria. Una fila = un día hábil.
+**Observaciones:** 3692 · **Columnas:** 7 · **Ventana:** 2011-01-03 a 2025-12-31
+**SHA-256:** `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f`
+
+**Fuente única:** BCRPData, Banco Central de Reserva del Perú.
 **Endpoint:** `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{código}/json/{inicio}/{fin}/esp`
+**Acceso:** API REST pública, sin clave ni registro.
+
+---
 
 ## Identificadores
 
 | Variable | Definición | Tipo |
 |---|---|---|
-| `fecha` | Primer día del mes de observación | fecha |
-| `anio`, `mes_num` | Año y mes, derivados de `fecha` | entero |
-| `instrumento` | Código del instrumento. Con `fecha` forma la llave | texto |
-| `etiqueta` | Nombre legible, para tablas y figuras | texto |
-| `tipo_bono` | Agregado, Corporativo, Financiero, Titulización, Plazo corto, Plazo medio | categórica |
-| `medida` | Flujo (Colocación) o stock (Saldo) | categórica |
+| `id` | Correlativo de 1 a 3692 | entero |
+| `fecha` | Día hábil de observación | fecha AAAA-MM-DD |
 
-## Dependiente
+## Variable dependiente
 
-| Variable | Definición | Unidad |
-|---|---|---|
-| `monto_mill_soles` | Monto del instrumento en el mes | millones de S/ |
-| `log_monto` | `ln(1 + monto)`. **Dependiente del modelo.** Se usa `log1p` porque hay meses sin colocación, con valor cero, y `log(0)` no existe | adimensional |
-
-### Las siete series del panel (cuadros cn-058 y cn-059 de la Nota Semanal)
-
-| `instrumento` | Código | Serie oficial |
-|---|---|---|
-| `coloc_sector_privado` | `PN01064MM` | Bonos · Sector Privado · Colocación |
-| `coloc_corporativos` | `PN01081MM` | Entidades No Financieras · Bonos Corporativos · Colocación |
-| `coloc_arrendamiento` | `PN01068MM` | Entidades Financieras · Arrendamiento Financiero · Colocación |
-| `coloc_titulizacion` | `PN01084MM` | Entidades No Financieras · Bonos de Titulización · Colocación |
-| `saldo_corporativos` | `PN01101MM` | Saldos · Por Tipo · Corporativos |
-| `saldo_plazo_hasta_3a` | `PN01103MM` | Saldos · Por Plazo · Hasta 3 años |
-| `saldo_plazo_3a_5a` | `PN01104MM` | Saldos · Por Plazo · De 3 hasta 5 años |
-
-## Explicativas
-
-Comunes a todos los instrumentos del mismo mes, como corresponde en un panel.
-
-| Variable | Código | Definición | Unidad | Cobertura |
+| Variable | Definición | Unidad | Código | Cobertura |
 |---|---|---|---|---|
-| `tasa_referencia` | `PD04722MM` | Tasa de Referencia de la Política Monetaria | % anual | Sep-2003 → Ago-2026 |
-| `rend_soberano_10a_pen` | `PD31895MM` | Rendimiento del bono peruano a 10 años, soles | % anual | May-2005 → Ago-2026 |
-| `rend_soberano_10a_usd` | `PD31896MM` | Rendimiento del bono peruano a 10 años, dólares | % anual | Jul-2009 → Ago-2026 |
-| `embig_peru` | `PN01129XM` | EMBIG Perú. Diferencial de rendimientos del índice de bonos de mercados emergentes | puntos básicos | Ago-2006 → Jun-2026 |
-| `tasa_pref_corp_90d_mn` | `PN07809NM` | Tasa activa preferencial corporativa a 90 días, MN | % anual | Ago-2010 → Ago-2026 |
-| `tasa_corp_mas360_mn` | `PN07842NM` | Tasa activa a corporativos, grandes y medianas, préstamos > 360 días, MN | % anual | Ago-2010 → Ago-2026 |
+| `Y_rendimiento_soberano` | Rendimiento del bono del gobierno peruano a 10 años, en soles. Tasa base sobre la que se fija el costo de cualquier emisión corporativa local | % anual | `PD31893DD` | desde 13-05-2005 |
 
-## Construidas por `03_limpieza_datos.py`
+## Variables explicativas
 
-| Variable | Definición | Cálculo |
-|---|---|---|
-| `riesgo_pais_pct` | EMBIG en porcentaje, comparable con las demás tasas | `embig_peru / 100` |
-| `prima_plazo` | Cuánto más paga el soberano a 10 años que la tasa de política | `rend_soberano_10a_pen − tasa_referencia` |
-| `spread_bancario` | Sobrecosto del crédito bancario corporativo sobre la tasa de política. Comparador del bono frente al préstamo | `tasa_pref_corp_90d_mn − tasa_referencia` |
-| `outlier_monto` | Marca extremos dentro de cada instrumento, por rango intercuartílico con factor 3. No se eliminan: se señalan | `monto < Q1 − 3·RIC` o `monto > Q3 + 3·RIC` |
+| Variable | Definición | Unidad | Código | Cobertura |
+|---|---|---|---|---|
+| `X1_tasa_referencia` | Tasa de referencia de la política monetaria del BCRP | % anual | `PD12301MD` | desde 05-09-2003 |
+| `X2_treasury_10a` | Rendimiento de los bonos del Tesoro de EE.UU. a 10 años. Tasa global libre de riesgo | % anual | `PD04719XD` | desde 14-01-1997 |
+| `X3_riesgo_pais` | EMBIG Perú. Diferencial de rendimientos del índice de bonos de mercados emergentes, convertido de puntos básicos a porcentaje | % | `PD04709XD` | desde 01-01-1998 |
+| `X4_tasa_interbancaria` | Tasa de interés interbancaria en soles | % anual | `PD04692MD` | desde 03-04-1995 |
+
+**Cinco variables sustantivas.** El numeral 2.4.1 exige un mínimo de cuatro.
+
+## Única transformación aplicada
+
+`X3_riesgo_pais = PD04709XD / 100`
+
+El EMBIG se publica en puntos básicos y las demás series en porcentaje. La
+división hace que todas sean comparables en la misma unidad. Ninguna otra
+variable se transforma: los cuatro restantes se entregan tal como los publica
+la fuente.
+
+## Tratamiento de datos faltantes
+
+**No se rellenó ningún hueco.** De los 3 913 días del rango se conservan los
+3692 en que las cinco series publicaron dato.
+
+| Serie | Días sin publicación |
+|---|---|
+| `Y_rendimiento_soberano` | 186 |
+| `X1_tasa_referencia` | 107 |
+| `X2_treasury_10a` | 10 |
+| `X3_riesgo_pais` | 0 |
+| `X4_tasa_interbancaria` | 159 |
+
+Total de días descartados: 221.
+
+Los feriados no coinciden entre el mercado peruano y el estadounidense, y el
+bono soberano no se negocia todos los días. Rellenar con el último valor
+conocido habría conservado esas filas, pero habría producido celdas sin
+respaldo en la fuente para esa fecha. Con el criterio adoptado, **cada celda
+del archivo existe en BCRPData** y resiste el cotejo del numeral 2.4.6.
+
+El archivo final no contiene ningún valor ausente.
+
+## Variables calculadas en el análisis
+
+`04_analisis.py` calcula las variaciones diarias (`d_` + nombre) a partir de
+los niveles de esta tabla. No se almacenan aquí porque se derivan de las
+columnas existentes.
+
+La prueba de Dickey-Fuller aumentada no rechaza la hipótesis de raíz unitaria
+en niveles para cuatro de las cinco series, por lo que el modelo principal se
+estima sobre las variaciones diarias.
+
+| Variable | p-valor en nivel | p-valor en variación | Orden |
+|---|---|---|---|
+| `Y_rendimiento_soberano` | 0,2128 | 0,0000 | I(1) |
+| `X1_tasa_referencia` | 0,4749 | 0,0000 | I(1) |
+| `X2_treasury_10a` | 0,6533 | 0,0000 | I(1) |
+| `X3_riesgo_pais` | 0,0003 | 0,0000 | I(0) |
+| `X4_tasa_interbancaria` | 0,6058 | 0,0000 | I(1) |
 
 ## Sustituciones respecto del temario
 
-El temario pedía **tasa de colocación** y **clasificación de riesgo**. Ninguna
-existe como serie en BCRPData: se revisaron las 209 series mensuales de la
-categoría Tasas de interés y los cuadros de bonos.
+El temario asigna al tema 36 seis variables y propone la SMV como vía 2. Dos de
+ellas no existen como serie accesible por vía automatizada:
 
-- **Tasa de colocación** → la dependiente pasa a ser el monto colocado, y
-  `spread_bancario` entra como medida del costo de financiamiento alternativo.
-- **Clasificación de riesgo** → `embig_peru`, riesgo crediticio puesto en precio
-  por el mercado en lugar de calificado por una agencia.
+| Variable del temario | Situación | Sustituto |
+|---|---|---|
+| Tasa de colocación por emisión | No existe como serie. El SIMV de la SMV exige un token cifrado que se genera por sesión | `Y_rendimiento_soberano`: tasa base del mercado de bonos peruano |
+| Clasificación de riesgo del emisor | La emiten clasificadoras privadas, no se publica como serie | `X3_riesgo_pais`: riesgo crediticio puesto en precio por el mercado |
 
-Ambas sustituciones se declaran en la sección de Materiales y métodos del artículo.
+El detalle de la exploración de fuentes está en `incidencias_fuente.md`.
 
-## Notas de tratamiento
+## Verificación contra la fuente
 
-- Los valores marcados `n.d.` por el BCRP se convierten en vacío. **Nunca se
-  rellenan con un valor inventado.**
-- El monto cero es dato real: significa que ese mes no hubo colocación de ese
-  instrumento. Por eso se usa `log1p`.
-- Los datos crudos de `/datos_crudos` se entregan tal como salieron de la API.
-  No se editan bajo ninguna circunstancia (numeral 2.4.5).
+Se cotejaron diez observaciones al azar contra la API en vivo, con coincidencia
+en las diez. Los enlaces públicos de cada serie están en
+`datos_crudos/verificacion_series_diarias.csv`.
 
-## Citación en APA 7
+## Citación en APA 7 (numeral 2.4.8)
 
-Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos estadísticos*
-[Conjunto de datos]. Consultado el 2026-09-22.
+Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-23.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/

@@ -1,0 +1,6 @@
+Variable,Codigo BCRP,Ver la serie,Endpoint API
+Y_rend_soberano_10a,PD31893DD,https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD31893DD/html,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD31893DD/json/2011-1-1/2025-12-31/esp
+X1_tasa_referencia,PD12301MD,https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD12301MD/html,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD12301MD/json/2011-1-1/2025-12-31/esp
+X2_treasury_10a,PD04719XD,https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD04719XD/html,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04719XD/json/2011-1-1/2025-12-31/esp
+X3_embig_peru,PD04709XD,https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD04709XD/html,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04709XD/json/2011-1-1/2025-12-31/esp
+X4_interbancaria,PD04692MD,https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD04692MD/html,https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04692MD/json/2011-1-1/2025-12-31/esp

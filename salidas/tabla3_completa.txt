@@ -1,0 +1,28 @@
+                              OLS Regression Results                              
+==================================================================================
+Dep. Variable:     Y_rendimiento_soberano   R-squared:                       0.787
+Model:                                OLS   Adj. R-squared:                  0.787
+Method:                     Least Squares   F-statistic:                     724.5
+Date:                    Wed, 23 Sep 2026   Prob (F-statistic):               0.00
+Time:                            02:50:36   Log-Likelihood:                -2587.0
+No. Observations:                    3692   AIC:                             5184.
+Df Residuals:                        3687   BIC:                             5215.
+Df Model:                               4                                         
+Covariance Type:                      HAC                                         
+=========================================================================================
+                            coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                 1.2336      0.123      9.989      0.000       0.992       1.476
+X1_tasa_referencia       -0.1302      0.120     -1.083      0.279      -0.366       0.105
+X2_treasury_10a           0.5531      0.023     24.012      0.000       0.508       0.598
+X3_riesgo_pais            1.5960      0.082     19.467      0.000       1.435       1.757
+X4_tasa_interbancaria     0.2567      0.120      2.132      0.033       0.021       0.493
+==============================================================================
+Omnibus:                       65.330   Durbin-Watson:                   0.038
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               83.802
+Skew:                           0.238   Prob(JB):                     6.35e-19
+Kurtosis:                       3.563   Cond. No.                         68.5
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 5 lags and without small sample correction
