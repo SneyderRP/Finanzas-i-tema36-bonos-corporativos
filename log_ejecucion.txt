@@ -607,3 +607,24 @@
 [2026-09-25 18:55:21] Salida generada: figura3_variaciones.png
 [2026-09-25 18:55:22] Salida generada: figura4_riesgo_vs_rendimiento.png
 [2026-09-25 18:55:22] Analisis terminado.
+[2026-09-25 18:55:40] Leido crudo diario | filas=3913
+[2026-09-25 18:55:40] Faltantes en Y_rend_soberano_10a: 186
+[2026-09-25 18:55:40] Faltantes en X1_tasa_referencia: 107
+[2026-09-25 18:55:40] Faltantes en X2_treasury_10a: 10
+[2026-09-25 18:55:40] Faltantes en X3_embig_peru: 0
+[2026-09-25 18:55:40] Faltantes en X4_interbancaria: 159
+[2026-09-25 18:55:40] Dias descartados por falta de publicacion: 221
+[2026-09-25 18:55:40] Guardado procesado | filas=3692
+[2026-09-25 18:55:40] Tabla final | filas=3692 | SHA-256: 4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f
+[2026-09-25 18:55:43] Analisis: tabla final cargada | filas=3692
+[2026-09-25 18:55:43] Salida generada: tabla1_descriptiva
+[2026-09-25 18:55:45] Salida generada: tabla2_adf
+[2026-09-25 18:55:45] Salida generada: tabla3_niveles
+[2026-09-25 18:55:45] Niveles | R2=0.787 | Durbin-Watson=0.038
+[2026-09-25 18:55:45] Salida generada: tabla4_variaciones
+[2026-09-25 18:55:45] Variaciones | R2=0.139 | Durbin-Watson=2.087 | N=3691
+[2026-09-25 18:55:46] Salida generada: figura1_series_diarias.png
+[2026-09-25 18:55:47] Salida generada: figura2_spread_soberano.png
+[2026-09-25 18:55:47] Salida generada: figura3_variaciones.png
+[2026-09-25 18:55:48] Salida generada: figura4_riesgo_vs_rendimiento.png
+[2026-09-25 18:55:48] Analisis terminado.
