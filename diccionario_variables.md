@@ -109,5 +109,5 @@ en las diez. Los enlaces públicos de cada serie están en
 ## Citación en APA 7 (numeral 2.4.8)
 
 Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
-estadísticos* [Conjunto de datos]. Consultado el 2026-09-23.
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-25.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/

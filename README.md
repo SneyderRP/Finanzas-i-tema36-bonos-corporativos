@@ -27,7 +27,7 @@ a 10 años, riesgo país (EMBIG Perú) y tasa interbancaria en soles.
 | Tipo | API REST pública, sin clave de acceso |
 | Endpoint | `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{código}/json/{inicio}/{fin}/esp` |
 | Series | 5, todas diarias. Ver `diccionario_variables.md` |
-| Fecha de consulta | 2026-09-23 |
+| Fecha de consulta | 2026-09-25 |
 
 Cada serie se descarga por separado y se guarda en `datos_crudos/diarias/`, para
 poder cotejarla contra la fuente oficial una por una (numeral 2.4.6).
@@ -141,7 +141,7 @@ junto con sus componentes. Se mantiene como evidencia del proceso de trabajo.
 ## 13. Citación en APA 7 (numeral 2.4.8)
 
 Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
-estadísticos* [Conjunto de datos]. Consultado el 2026-09-23.
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-25.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/
 
 ## 14. Declaración sobre el uso de IA

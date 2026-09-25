@@ -3,8 +3,8 @@
 Dep. Variable:              log_monto   R-squared:                       0.769
 Model:                            OLS   Adj. R-squared:                  0.768
 Method:                 Least Squares   F-statistic:                     3.749
-Date:                Wed, 23 Sep 2026   Prob (F-statistic):             0.0733
-Time:                        01:47:02   Log-Likelihood:                -2521.1
+Date:                Fri, 25 Sep 2026   Prob (F-statistic):             0.0733
+Time:                        18:47:18   Log-Likelihood:                -2521.1
 No. Observations:                1260   AIC:                             5064.
 Df Residuals:                    1249   BIC:                             5121.
 Df Model:                          10                                         

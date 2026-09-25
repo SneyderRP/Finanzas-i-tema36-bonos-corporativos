@@ -7,7 +7,7 @@ Registro de limitaciones tecnicas de las fuentes consultadas (numeral 2.4.3).
 La via API respondio HTTP 200 en las 13 series consultadas, sin bloqueos.
 El detalle de cada solicitud esta en `log_ejecucion.txt`.
 
-## 2. SMV — exploracion documentada el 2026-09-23
+## 2. SMV — exploracion documentada el 2026-09-25
 
 Se exploro el portal de la Superintendencia del Mercado de Valores buscando
 la tasa de colocacion por emision y la clasificacion de riesgo, variables que
