@@ -941,3 +941,11 @@
 [2026-09-26 18:13:34] Salida generada: figura3_variaciones.png
 [2026-09-26 18:13:35] Salida generada: figura4_riesgo_vs_rendimiento.png
 [2026-09-26 18:13:35] Analisis terminado.
+[2026-09-26 18:13:46] Graficos comparativos: base cargada | filas=3692
+[2026-09-26 18:13:47] Salida generada: figura5_Y_vs_X1.png | r_niveles=0.697 r_variaciones=0.084
+[2026-09-26 18:13:48] Salida generada: figura6_Y_vs_X2.png | r_niveles=0.649 r_variaciones=0.162
+[2026-09-26 18:13:49] Salida generada: figura7_Y_vs_X3.png | r_niveles=0.541 r_variaciones=0.239
+[2026-09-26 18:13:50] Salida generada: figura8_Y_vs_X4.png | r_niveles=0.704 r_variaciones=0.059
+[2026-09-26 18:13:51] Salida generada: figura9_matriz_correlaciones.png
+[2026-09-26 18:13:51] Salida generada: tabla5_correlaciones
+[2026-09-26 18:13:51] Salida generada: tabla6_correlaciones_con_Y
