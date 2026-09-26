@@ -71,7 +71,7 @@ python 05_graficos_comparativos.py   # comparativos -> /salidas
 | Campo | Valor |
 |---|---|
 | Archivo | `datos_procesados/datos_procesados_2024200522B.csv` |
-| SHA-256 | `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f` |
+| SHA-256 | `92fd17b6d2ccab25b8fdd0d8beee5c6e33d6135579009d1a2055f0deadc5c9ec` |
 | Filas | 3692 |
 | Columnas | 7 |
 

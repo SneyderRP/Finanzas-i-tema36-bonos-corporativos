@@ -6,7 +6,7 @@
 
 **Estructura:** serie de tiempo diaria. Una fila = un día hábil.
 **Observaciones:** 3692 · **Columnas:** 7 · **Ventana:** 2011-01-03 a 2025-12-31
-**SHA-256:** `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f`
+**SHA-256:** `92fd17b6d2ccab25b8fdd0d8beee5c6e33d6135579009d1a2055f0deadc5c9ec`
 
 **Fuente única:** BCRPData, Banco Central de Reserva del Perú.
 **Endpoint:** `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{código}/json/{inicio}/{fin}/esp`

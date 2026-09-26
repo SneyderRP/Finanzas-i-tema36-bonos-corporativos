@@ -949,3 +949,32 @@
 [2026-09-26 18:13:51] Salida generada: figura9_matriz_correlaciones.png
 [2026-09-26 18:13:51] Salida generada: tabla5_correlaciones
 [2026-09-26 18:13:51] Salida generada: tabla6_correlaciones_con_Y
+[2026-09-26 18:14:04] Leido crudo diario | filas=3913
+[2026-09-26 18:14:04] Faltantes en Y_rend_soberano_10a: 186
+[2026-09-26 18:14:04] Faltantes en X1_tasa_referencia: 107
+[2026-09-26 18:14:04] Faltantes en X2_treasury_10a: 10
+[2026-09-26 18:14:04] Faltantes en X3_embig_peru: 0
+[2026-09-26 18:14:04] Faltantes en X4_interbancaria: 159
+[2026-09-26 18:14:04] Dias descartados por falta de publicacion: 221
+[2026-09-26 18:14:04] Guardado procesado | filas=3692
+[2026-09-26 18:14:04] Tabla final | filas=3692 | SHA-256: 92fd17b6d2ccab25b8fdd0d8beee5c6e33d6135579009d1a2055f0deadc5c9ec
+[2026-09-26 18:14:07] Analisis: tabla final cargada | filas=3692
+[2026-09-26 18:14:07] Salida generada: tabla1_descriptiva
+[2026-09-26 18:14:12] Salida generada: tabla2_adf
+[2026-09-26 18:14:13] Salida generada: tabla3_niveles
+[2026-09-26 18:14:13] Niveles | R2=0.787 | Durbin-Watson=0.038
+[2026-09-26 18:14:13] Salida generada: tabla4_variaciones
+[2026-09-26 18:14:13] Variaciones | R2=0.139 | Durbin-Watson=2.087 | N=3691
+[2026-09-26 18:14:13] Salida generada: figura1_series_diarias.png
+[2026-09-26 18:14:14] Salida generada: figura2_spread_soberano.png
+[2026-09-26 18:14:14] Salida generada: figura3_variaciones.png
+[2026-09-26 18:14:15] Salida generada: figura4_riesgo_vs_rendimiento.png
+[2026-09-26 18:14:15] Analisis terminado.
+[2026-09-26 18:14:16] Graficos comparativos: base cargada | filas=3692
+[2026-09-26 18:14:18] Salida generada: figura5_Y_vs_X1.png | r_niveles=0.697 r_variaciones=0.084
+[2026-09-26 18:14:19] Salida generada: figura6_Y_vs_X2.png | r_niveles=0.649 r_variaciones=0.162
+[2026-09-26 18:14:20] Salida generada: figura7_Y_vs_X3.png | r_niveles=0.541 r_variaciones=0.239
+[2026-09-26 18:14:21] Salida generada: figura8_Y_vs_X4.png | r_niveles=0.704 r_variaciones=0.059
+[2026-09-26 18:14:22] Salida generada: figura9_matriz_correlaciones.png
+[2026-09-26 18:14:22] Salida generada: tabla5_correlaciones
+[2026-09-26 18:14:22] Salida generada: tabla6_correlaciones_con_Y

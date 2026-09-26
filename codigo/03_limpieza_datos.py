@@ -10,6 +10,12 @@ Entra:  datos_crudos_diario_<codigo>.csv   (3 913 dias, 5 series)
 Sale:   datos_procesados_diario_<codigo>.csv
         datos_procesados_<codigo>.csv      (base del articulo)
 
+Llave comun: la columna `fecha`. Las cinco series llegan de la API con su
+propia lista de fechas y valores; el merge(on="fecha", how="outer") de
+01_extraccion_api.py las alinea dia contra dia. Este script recibe el archivo
+ya unificado y se ocupa de la depuracion, la tipificacion, el tratamiento de
+faltantes y de outliers, y la generacion del archivo procesado.
+
 Criterio de limpieza: NO se rellena ningun hueco. Se conservan unicamente los
 dias en que las cinco series publicaron dato. Asi cada celda del archivo final
 existe en la fuente oficial y resiste el cotejo del numeral 2.4.6.
@@ -92,6 +98,15 @@ def main():
     # La tabla final entrega id, fecha y las cinco variables sustantivas.
     t = t[["id", "fecha", "Y_rendimiento_soberano", "X1_tasa_referencia",
            "X2_treasury_10a", "X3_riesgo_pais", "X4_tasa_interbancaria"]]
+
+    # Redondeo a tres decimales. La aritmetica de coma flotante produce
+    # representaciones como 6.4399999999999995 en lugar de 6.44. Ninguna de
+    # las cinco series se publica con mas de tres decimales en la fuente, de
+    # modo que el redondeo no altera la informacion: solo elimina el ruido de
+    # representacion binaria y hace el archivo legible.
+    SUST = ["Y_rendimiento_soberano", "X1_tasa_referencia", "X2_treasury_10a",
+            "X3_riesgo_pais", "X4_tasa_interbancaria"]
+    t[SUST] = t[SUST].round(3)
 
     final = RAIZ / "datos_procesados" / "datos_procesados_2024200522B.csv"
     t.to_csv(final, index=False, encoding="utf-8")
