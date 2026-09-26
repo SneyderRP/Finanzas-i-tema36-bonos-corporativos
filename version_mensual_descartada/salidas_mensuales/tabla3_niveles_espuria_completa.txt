@@ -3,8 +3,8 @@
 Dep. Variable:     Y_rend_soberano_10a   R-squared:                       0.787
 Model:                             OLS   Adj. R-squared:                  0.787
 Method:                  Least Squares   F-statistic:                     724.5
-Date:                 Fri, 25 Sep 2026   Prob (F-statistic):               0.00
-Time:                         18:51:37   Log-Likelihood:                -2587.0
+Date:                 Sat, 26 Sep 2026   Prob (F-statistic):               0.00
+Time:                         18:11:31   Log-Likelihood:                -2587.0
 No. Observations:                 3692   AIC:                             5184.
 Df Residuals:                     3687   BIC:                             5215.
 Df Model:                            4                                         

@@ -1,7 +1,7 @@
 # Meglinho Sneyder Rojas Poma
 # Codigo de matricula: 2024200522B
 # Tema 36 del temario: Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
-# Fecha de extraccion: 2026-09-25
+# Fecha de extraccion: 2026-09-26
 
 """
 ANALISIS. Genera TODAS las tablas y figuras del articulo.
@@ -39,10 +39,10 @@ NIV = ["Y_rendimiento_soberano", "X1_tasa_referencia", "X2_treasury_10a",
        "X3_riesgo_pais", "X4_tasa_interbancaria"]
 DIF = ["d_" + v for v in NIV]
 
-ETIQ = {"Y_rendimiento_soberano": "Rendimiento del bono peruano a 10 años",
+ETIQ = {"Y_rendimiento_soberano": "Rendimiento del bono peruano a 10 anos",
         "X1_tasa_referencia":     "Tasa de referencia del BCRP",
-        "X2_treasury_10a":        "Bonos del Tesoro EE.UU. a 10 años",
-        "X3_riesgo_pais":         "Riesgo país (EMBIG Perú)",
+        "X2_treasury_10a":        "Bonos del Tesoro EE.UU. a 10 anos",
+        "X3_riesgo_pais":         "Riesgo pais (EMBIG Peru)",
         "X4_tasa_interbancaria":  "Tasa interbancaria en soles"}
 
 
@@ -69,7 +69,7 @@ def figura(nombre):
 
 
 def main():
-    d = pd.read_csv(RAIZ / "datos_procesados" / "datos_procesados_2024200522B.csv",
+    d = pd.read_csv(RAIZ / "datos_procesados" / "tabla_final_2024200522B.csv",
                     parse_dates=["fecha"])
     log(f"Analisis: tabla final cargada | filas={len(d)}")
 
@@ -132,14 +132,14 @@ def main():
     plt.figure(figsize=(11, 4))
     plt.plot(d.fecha, d.Y_rendimiento_soberano - d.X2_treasury_10a, linewidth=.9)
     plt.xlabel("Fecha"); plt.ylabel("Puntos porcentuales")
-    plt.title("Spread del bono peruano sobre el Tesoro de EE.UU. a 10 años")
+    plt.title("Spread del bono peruano sobre el Tesoro de EE.UU. a 10 anos")
     plt.grid(alpha=.3)
     figura("figura2_spread_soberano")
 
     # --- Figura 3: volatilidad de las variaciones
     plt.figure(figsize=(11, 4))
     plt.plot(dd.fecha, dd.d_Y_rendimiento_soberano, linewidth=.6)
-    plt.xlabel("Fecha"); plt.ylabel("Variación diaria (p.p.)")
+    plt.xlabel("Fecha"); plt.ylabel("Variacion diaria (p.p.)")
     plt.title("Variaciones diarias del rendimiento soberano")
     plt.grid(alpha=.3)
     figura("figura3_variaciones")
@@ -147,9 +147,9 @@ def main():
     # --- Figura 4: dispersion frente al riesgo pais
     plt.figure(figsize=(6.5, 5))
     plt.scatter(dd.d_X3_riesgo_pais, dd.d_Y_rendimiento_soberano, s=6, alpha=.4)
-    plt.xlabel("Variación diaria del riesgo país (p.p.)")
-    plt.ylabel("Variación diaria del rendimiento (p.p.)")
-    plt.title("Riesgo país y rendimiento soberano")
+    plt.xlabel("Variacion diaria del riesgo pais (p.p.)")
+    plt.ylabel("Variacion diaria del rendimiento (p.p.)")
+    plt.title("Riesgo pais y rendimiento soberano")
     plt.grid(alpha=.3)
     figura("figura4_riesgo_vs_rendimiento")
 

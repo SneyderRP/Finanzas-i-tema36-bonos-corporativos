@@ -1,6 +1,6 @@
 # Diccionario de variables
 
-**Archivo:** `datos_procesados/datos_procesados_2024200522B.csv`
+**Archivo:** `datos_procesados/tabla_final_2024200522B.csv`
 **Estudiante:** ROJAS POMA, MEGLINHO SNEYDER — 2024200522B
 **Tema 36:** Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
 
@@ -109,5 +109,5 @@ en las diez. Los enlaces públicos de cada serie están en
 ## Citación en APA 7 (numeral 2.4.8)
 
 Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
-estadísticos* [Conjunto de datos]. Consultado el 2026-09-25.
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-26.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/

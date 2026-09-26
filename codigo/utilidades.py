@@ -1,7 +1,7 @@
 # Meglinho Sneyder Rojas Poma
 # Codigo de matricula: 2024200522B
 # Tema 36 del temario: Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
-# Fecha de extraccion: 2026-09-25
+# Fecha de extraccion: 2026-09-26
 
 """Log de ejecucion y hash SHA-256."""
 import hashlib, importlib.util

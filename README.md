@@ -27,7 +27,7 @@ a 10 años, riesgo país (EMBIG Perú) y tasa interbancaria en soles.
 | Tipo | API REST pública, sin clave de acceso |
 | Endpoint | `https://estadisticas.bcrp.gob.pe/estadisticas/series/api/{código}/json/{inicio}/{fin}/esp` |
 | Series | 5, todas diarias. Ver `diccionario_variables.md` |
-| Fecha de consulta | 2026-09-25 |
+| Fecha de consulta | 2026-09-26 |
 
 Cada serie se descarga por separado y se guarda en `datos_crudos/diarias/`, para
 poder cotejarla contra la fuente oficial una por una (numeral 2.4.6).
@@ -55,7 +55,6 @@ pip install -r ../requirements.txt
 python 01_extraccion_api.py    # 5 series diarias   -> /datos_crudos
 python 03_limpieza_datos.py    # limpieza y tabla   -> /datos_procesados
 python 04_analisis.py          # tablas y figuras   -> /salidas
-python 05_graficos_comparativos.py   # comparativos -> /salidas
 ```
 
 ## 5. Versiones
@@ -70,7 +69,7 @@ python 05_graficos_comparativos.py   # comparativos -> /salidas
 
 | Campo | Valor |
 |---|---|
-| Archivo | `datos_procesados/datos_procesados_2024200522B.csv` |
+| Archivo | `datos_procesados/tabla_final_2024200522B.csv` |
 | SHA-256 | `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f` |
 | Filas | 3692 |
 | Columnas | 7 |
@@ -101,7 +100,7 @@ Se entrega `.env.example` por si se incorpora una fuente con token.
 | Campo | Valor |
 |---|---|
 | URL | https://github.com/SneyderRP/Finanzas-i-tema36-bonos-corporativos |
-| Commits | 4 commits en 3 fechas distintas: 22, 23 y 25 de septiembre de 2026 |
+| Commits | ver la pestaña Commits del repositorio |
 
 ## 10. Trazabilidad de tablas y figuras
 
@@ -117,13 +116,6 @@ Todas se regeneran con `04_analisis.py`:
 | Figura 2 | `salidas/figura2_spread_soberano.png` | Resultados |
 | Figura 3 | `salidas/figura3_variaciones.png` | Resultados |
 | Figura 4 | `salidas/figura4_riesgo_vs_rendimiento.png` | Resultados |
-| Figura 5 | `salidas/figura5_Y_vs_X1.png` | Resultados |
-| Figura 6 | `salidas/figura6_Y_vs_X2.png` | Resultados |
-| Figura 7 | `salidas/figura7_Y_vs_X3.png` | Resultados |
-| Figura 8 | `salidas/figura8_Y_vs_X4.png` | Resultados |
-| Figura 9 | `salidas/figura9_matriz_correlaciones.png` | Resultados |
-| Tabla 5 | `salidas/tabla5_correlaciones.tex` | Resultados |
-| Tabla 6 | `salidas/tabla6_correlaciones_con_Y.tex` | Materiales y métodos |
 
 ## 11. Nota metodológica
 
@@ -149,7 +141,7 @@ junto con sus componentes. Se mantiene como evidencia del proceso de trabajo.
 ## 13. Citación en APA 7 (numeral 2.4.8)
 
 Banco Central de Reserva del Perú. (2026). *BCRPData: base de datos
-estadísticos* [Conjunto de datos]. Consultado el 2026-09-25.
+estadísticos* [Conjunto de datos]. Consultado el 2026-09-26.
 https://estadisticas.bcrp.gob.pe/estadisticas/series/
 
 ## 14. Declaración sobre el uso de IA

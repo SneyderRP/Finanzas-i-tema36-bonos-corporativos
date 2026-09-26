@@ -1,14 +1,14 @@
 # Meglinho Sneyder Rojas Poma
 # Codigo de matricula: 2024200522B
 # Tema 36 del temario: Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
-# Fecha de extraccion: 2026-09-25
+# Fecha de extraccion: 2026-09-26
 
 """
 LIMPIEZA Y CONSTRUCCION DE LA SERIE DE TIEMPO DIARIA.
 
 Entra:  datos_crudos_diario_<codigo>.csv   (3 913 dias, 5 series)
 Sale:   datos_procesados_diario_<codigo>.csv
-        datos_procesados_<codigo>.csv      (base del articulo)
+        tabla_final_<codigo>.csv           (base del articulo)
 
 Criterio de limpieza: NO se rellena ningun hueco. Se conservan unicamente los
 dias en que las cinco series publicaron dato. Asi cada celda del archivo final
@@ -66,7 +66,7 @@ def main():
     cols = ["id", "fecha", "anio", "Y_rend_soberano_10a", "X1_tasa_referencia",
             "X2_treasury_10a", "X3_embig_peru", "X3_riesgo_pais",
             "X4_interbancaria", "spread_soberano", "outlier_Y"]
-    proc = RAIZ / "datos_procesados" / "intermedio_diario_2024200522B.csv"
+    proc = RAIZ / "datos_procesados" / "datos_procesados_diario_2024200522B.csv"
     d[cols].to_csv(proc, index=False, encoding="utf-8")
     log(f"Guardado procesado | filas={len(d)}")
 
@@ -93,7 +93,7 @@ def main():
     t = t[["id", "fecha", "Y_rendimiento_soberano", "X1_tasa_referencia",
            "X2_treasury_10a", "X3_riesgo_pais", "X4_tasa_interbancaria"]]
 
-    final = RAIZ / "datos_procesados" / "datos_procesados_2024200522B.csv"
+    final = RAIZ / "datos_procesados" / "tabla_final_2024200522B.csv"
     t.to_csv(final, index=False, encoding="utf-8")
 
     firma = hashlib.sha256(final.read_bytes()).hexdigest()
