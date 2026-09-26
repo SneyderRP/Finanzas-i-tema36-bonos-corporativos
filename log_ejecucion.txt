@@ -908,3 +908,15 @@
 [2026-09-26 18:12:28] GET verificacion HTML PD31893DD -> https://estadisticas.bcrp.gob.pe/estadisticas/series/diarias/resultados/PD31893DD/html | HTTP 200
 [2026-09-26 18:12:30] Tabla HTML parseada y guardada | filas=5575
 [2026-09-26 18:12:30] Comparacion | API: 3913 periodos | Web: 5575 filas
+[2026-09-26 18:12:53] Analisis: tabla final cargada | filas=3692
+[2026-09-26 18:12:53] Salida generada: tabla1_descriptiva
+[2026-09-26 18:12:59] Salida generada: tabla2_adf
+[2026-09-26 18:12:59] Salida generada: tabla3_niveles
+[2026-09-26 18:12:59] Niveles | R2=0.787 | Durbin-Watson=0.038
+[2026-09-26 18:12:59] Salida generada: tabla4_variaciones
+[2026-09-26 18:12:59] Variaciones | R2=0.139 | Durbin-Watson=2.087 | N=3691
+[2026-09-26 18:13:00] Salida generada: figura1_series_diarias.png
+[2026-09-26 18:13:01] Salida generada: figura2_spread_soberano.png
+[2026-09-26 18:13:01] Salida generada: figura3_variaciones.png
+[2026-09-26 18:13:01] Salida generada: figura4_riesgo_vs_rendimiento.png
+[2026-09-26 18:13:01] Analisis terminado.
