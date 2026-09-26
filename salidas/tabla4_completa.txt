@@ -4,7 +4,7 @@ Dep. Variable:     d_Y_rendimiento_soberano   R-squared:                       0
 Model:                                  OLS   Adj. R-squared:                  0.138
 Method:                       Least Squares   F-statistic:                     49.20
 Date:                      Sat, 26 Sep 2026   Prob (F-statistic):           2.19e-40
-Time:                              18:14:13   Log-Likelihood:                 4369.3
+Time:                              23:57:27   Log-Likelihood:                 4369.3
 No. Observations:                      3691   AIC:                            -8729.
 Df Residuals:                          3686   BIC:                            -8697.
 Df Model:                                 4                                         

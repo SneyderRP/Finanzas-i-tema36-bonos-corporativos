@@ -978,3 +978,16 @@
 [2026-09-26 18:14:22] Salida generada: figura9_matriz_correlaciones.png
 [2026-09-26 18:14:22] Salida generada: tabla5_correlaciones
 [2026-09-26 18:14:22] Salida generada: tabla6_correlaciones_con_Y
+[2026-09-26 23:57:16] Analisis: tabla final cargada | filas=3692
+[2026-09-26 23:57:16] Salida generada: tabla1_descriptiva
+[2026-09-26 23:57:27] Salida generada: tabla2_adf
+[2026-09-26 23:57:27] Salida generada: tabla3_niveles
+[2026-09-26 23:57:27] Niveles | R2=0.787 | Durbin-Watson=0.038
+[2026-09-26 23:57:27] Salida generada: tabla4_variaciones
+[2026-09-26 23:57:27] Variaciones | R2=0.139 | Durbin-Watson=2.087 | N=3691
+[2026-09-26 23:57:29] Salida generada: figura1_series_diarias.png
+[2026-09-26 23:57:30] Salida generada: figura2_spread_soberano.png
+[2026-09-26 23:57:31] Salida generada: figura3_variaciones.png
+[2026-09-26 23:57:32] Salida generada: figura4_riesgo_vs_rendimiento.png
+[2026-09-26 23:57:32] Salida generada: tabla7_diagnostico
+[2026-09-26 23:57:32] Analisis terminado.

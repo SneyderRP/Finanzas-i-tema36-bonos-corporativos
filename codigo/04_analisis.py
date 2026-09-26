@@ -153,6 +153,28 @@ def main():
     plt.grid(alpha=.3)
     figura("figura4_riesgo_vs_rendimiento")
 
+    # --- Tabla 7: diagnostico de los residuos de ambas especificaciones
+    # Durbin-Watson contrasta autocorrelacion: cerca de 2 indica ausencia.
+    # Jarque-Bera (1980) contrasta normalidad; su hipotesis nula es que los
+    # residuos se distribuyen normalmente. Con 3 691 observaciones el rechazo
+    # no invalida la inferencia, sostenida por el teorema del limite central,
+    # y los errores Newey-West ya corrigen heterocedasticidad y autocorrelacion.
+    from statsmodels.stats.stattools import jarque_bera
+    diag = []
+    for nombre, mod, dw in [("Niveles", m1, dw1), ("Variaciones diarias", m2, dw2)]:
+        jb, jbp, sesgo, curt = jarque_bera(mod.resid)
+        diag.append({"Especificacion": nombre,
+                     "R2": round(mod.rsquared, 4),
+                     "Durbin-Watson": round(dw, 4),
+                     "Jarque-Bera": round(jb, 2),
+                     "p-valor JB": round(jbp, 4),
+                     "Asimetria": round(sesgo, 4),
+                     "Curtosis": round(curt, 3),
+                     "N": int(mod.nobs)})
+    guardar(pd.DataFrame(diag).set_index("Especificacion"),
+            "tabla7_diagnostico",
+            "Diagnostico de los residuos: autocorrelacion y normalidad")
+
     log("Analisis terminado.")
     print(f"\nNiveles      R2={m1.rsquared:.3f}  DW={dw1:.3f}  <- espuria")
     print(f"Variaciones  R2={m2.rsquared:.3f}  DW={dw2:.3f}  <- modelo principal")

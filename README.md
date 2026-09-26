@@ -124,8 +124,17 @@ Todas se regeneran con `04_analisis.py`:
 | Figura 9 | `salidas/figura9_matriz_correlaciones.png` | Resultados |
 | Tabla 5 | `salidas/tabla5_correlaciones.tex` | Resultados |
 | Tabla 6 | `salidas/tabla6_correlaciones_con_Y.tex` | Materiales y métodos |
+| Tabla 7 | `salidas/tabla7_diagnostico.tex` | Resultados |
 
-## 11. Nota metodológica
+## 11. Análisis aplicados
+
+| Tipo | Contenido | Salida |
+|---|---|---|
+| Descriptivo | Media, mediana, desviación estándar, mínimo y máximo de cada serie; evolución diaria 2011-2025 | `tabla1_descriptiva`, `figura1`, `figura2` |
+| Inferencial | Correlaciones de Pearson en niveles y en variaciones diarias; prueba de raíz unitaria de Dickey-Fuller aumentada | `tabla2_adf`, `tabla5`, `tabla6`, `figura9` |
+| Econométrico | MCO en niveles como diagnóstico y en primeras diferencias como modelo principal, con errores robustos de Newey-West; residuos revisados con Durbin-Watson y Jarque-Bera | `tabla3_niveles`, `tabla4_variaciones`, `tabla7_diagnostico` |
+
+## 12. Nota metodológica
 
 La regresión en niveles arroja R² de 0,787 pero Durbin-Watson de 0,038, muy
 lejos del valor 2 esperado. La prueba de Dickey-Fuller aumentada no rechaza la
