@@ -1,6 +1,6 @@
 # Diccionario de variables
 
-**Archivo:** `datos_procesados/tabla_final_2024200522B.csv`
+**Archivo:** `datos_procesados/datos_procesados_2024200522B.csv`
 **Estudiante:** ROJAS POMA, MEGLINHO SNEYDER — 2024200522B
 **Tema 36:** Bonos corporativos en el mercado peruano: colocaciones, tasas y plazos
 

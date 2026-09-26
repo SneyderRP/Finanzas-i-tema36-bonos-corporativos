@@ -69,7 +69,7 @@ def figura(nombre):
 
 
 def main():
-    d = pd.read_csv(RAIZ / "datos_procesados" / "tabla_final_2024200522B.csv",
+    d = pd.read_csv(RAIZ / "datos_procesados" / "datos_procesados_2024200522B.csv",
                     parse_dates=["fecha"])
     log(f"Analisis: tabla final cargada | filas={len(d)}")
 

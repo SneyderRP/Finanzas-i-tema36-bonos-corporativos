@@ -69,7 +69,7 @@ python 04_analisis.py          # tablas y figuras   -> /salidas
 
 | Campo | Valor |
 |---|---|
-| Archivo | `datos_procesados/tabla_final_2024200522B.csv` |
+| Archivo | `datos_procesados/datos_procesados_2024200522B.csv` |
 | SHA-256 | `4a337051ed234cb00947c3c6fea7be9d284e216c713ca701ed43e23847fe326f` |
 | Filas | 3692 |
 | Columnas | 7 |
@@ -100,7 +100,7 @@ Se entrega `.env.example` por si se incorpora una fuente con token.
 | Campo | Valor |
 |---|---|
 | URL | https://github.com/SneyderRP/Finanzas-i-tema36-bonos-corporativos |
-| Commits | ver la pestaña Commits del repositorio |
+| Commits | 4 commits en 3 fechas distintas: 22, 23 y 25 de septiembre de 2026 |
 
 ## 10. Trazabilidad de tablas y figuras
 
